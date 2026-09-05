@@ -11,7 +11,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="PropertySheets"><Import Project="$(ProjectDir)..\..\build\visual-studio\Pfd.Portable.props" /><Import Project="$(ProjectDir)..\..\build\visual-studio\Pfd.PostgreSQL.props" /></ImportGroup>
   <ItemDefinitionGroup><ClCompile><AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories></ClCompile></ItemDefinitionGroup>
-  <ItemGroup><ClInclude Include="include\pfd\database\Component.hpp" /><ClInclude Include="include\pfd\database\Connection.hpp" /></ItemGroup>
-  <ItemGroup><ClCompile Include="src\Component.cpp" /><ClCompile Include="src\Connection.cpp" /></ItemGroup>
+  <ItemGroup><ClInclude Include="include\pfd\database\Component.hpp" /><ClInclude Include="include\pfd\database\Connection.hpp" /><ClInclude Include="include\pfd\database\DatabaseError.hpp" /><ClInclude Include="include\pfd\database\QueryResult.hpp" /><ClInclude Include="include\pfd\database\Transaction.hpp" /></ItemGroup>
+  <ItemGroup><ClCompile Include="src\Component.cpp" /><ClCompile Include="src\Connection.cpp" /><ClCompile Include="src\DatabaseError.cpp" /><ClCompile Include="src\QueryResult.cpp" /><ClCompile Include="src\Transaction.cpp" /></ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>

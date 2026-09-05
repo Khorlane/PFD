@@ -163,3 +163,63 @@ The first compile identified that `postgres_ext.h` includes `pg_config_ext.h`. T
 - Transaction RAII.
 - Database schema and table creation.
 - Desktop user-interface integration.
+
+## 2026-09-05 17:28:30 -04:00 — Completed the initial PFD libpq access layer
+
+### Completed
+
+- Added `DatabaseError`, which retains the PostgreSQL primary message, SQLSTATE, severity, detail, hint, and context as separately accessible values.
+- Added the RAII-managed `QueryResult` wrapper for `PGresult`.
+- Exposed result status and status name, command tag, affected-row count, row and column counts, column names, SQL `NULL` detection, and text values.
+- Added explicit SQL execution for fixed statements used by infrastructure such as transaction boundaries.
+- Added parameterized statement execution through `PQexecParams`, including explicit SQL `NULL` parameters.
+- Added named statement preparation through `PQprepare` and execution through `PQexecPrepared`.
+- Added an RAII `Transaction` that begins on construction, supports explicit commit and rollback, and attempts rollback during destruction while a transaction remains active.
+- Kept all direct `libpq` calls inside `PfdDatabase`; portable callers see standard C++ types.
+- Kept SQL text, statement names, parameter values, transaction boundaries, PostgreSQL diagnostics, result metadata, and affected-row results visible to PFD code.
+- Reused the existing single smoke executable rather than adding a test framework or multiple test cases.
+- Did not create or modify any PostgreSQL schemas or tables.
+
+### Public implementation surface
+
+- `projects/PfdDatabase/include/pfd/database/Connection.hpp`
+- `projects/PfdDatabase/include/pfd/database/DatabaseError.hpp`
+- `projects/PfdDatabase/include/pfd/database/QueryResult.hpp`
+- `projects/PfdDatabase/include/pfd/database/Transaction.hpp`
+
+The implementation remains in the corresponding `projects/PfdDatabase/src` files. The Visual Studio project and filters were updated so all files appear normally in Solution Explorer.
+
+### Focused verification performed
+
+```powershell
+& '<Visual Studio MSBuild path>\MSBuild.exe' projects/PfdTests/PfdTests.vcxproj /t:Build /p:Configuration=Debug /p:Platform=x64 /m /nologo /v:minimal
+& 'out\build\Debug\x64\PfdTests.exe'
+```
+
+The one smoke executable successfully exercised:
+
+- Connection health through a parameterized `SELECT`.
+- Two text parameters and a calculated result.
+- A named prepared statement.
+- An explicit SQL `NULL` parameter.
+- Explicit transaction commit.
+- Explicit transaction rollback.
+- Automatic rollback on transaction destruction.
+
+Results:
+
+- Focused Debug/x64 build: passed.
+- Live access-layer smoke check against `pfd_dev`: passed.
+- Release build and broad regression testing: intentionally not run.
+
+### Cross-references
+
+- `SESSION.md`, PostgreSQL access decisions and section 23 lightweight verification policy.
+- `database/README.md` for the database-build boundary.
+
+### Deferred
+
+- Binary-valued query parameters and results; the current application interface is intentionally UTF-8 text-oriented.
+- Asynchronous and pipeline-mode libpq operations.
+- Connection pooling.
+- PFD schema creation and business repositories.
