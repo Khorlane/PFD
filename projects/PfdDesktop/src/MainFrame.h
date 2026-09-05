@@ -5,9 +5,9 @@
 class CMainFrame final : public CFrameWnd
 {
 public:
-    CMainFrame();
+  CMainFrame();
 
 protected:
-    afx_msg void OnPaint();
-    DECLARE_MESSAGE_MAP()
+  afx_msg void OnPaint();
+  DECLARE_MESSAGE_MAP()
 };

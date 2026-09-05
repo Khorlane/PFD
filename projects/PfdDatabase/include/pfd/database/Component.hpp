@@ -2,7 +2,8 @@
 
 #include <string_view>
 
-namespace pfd::database {
+namespace pfd::database
+{
 
 [[nodiscard]] std::string_view component_name() noexcept;
 

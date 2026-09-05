@@ -10,12 +10,12 @@
 \endif
 
 SELECT format(
-           'CREATE DATABASE %I OWNER pfd_database_owner ENCODING %L TEMPLATE template0',
-           :'pfd_database_name',
-           'UTF8'
-       )
+       'CREATE DATABASE %I OWNER pfd_database_owner ENCODING %L TEMPLATE template0',
+       :'pfd_database_name',
+       'UTF8'
+     )
 WHERE NOT EXISTS (
-    SELECT 1 FROM pg_database WHERE datname = :'pfd_database_name'
+  SELECT 1 FROM pg_database WHERE datname = :'pfd_database_name'
 )\gexec
 
 SELECT format('REVOKE CREATE ON DATABASE %I FROM PUBLIC', :'pfd_database_name')\gexec

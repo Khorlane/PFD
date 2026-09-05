@@ -10,7 +10,7 @@
   </Folder>
   <Folder Name="/Tests/"><Project Path="projects/PfdTests/PfdTests.vcxproj" Id="4fc2348b-e138-4dcc-b514-52c931d2774c" /></Folder>
   <Folder Name="/Resources/Repository/">
-    <File Path=".editorconfig" /><File Path=".gitattributes" /><File Path=".gitignore" />
+    <File Path=".clang-format" /><File Path=".editorconfig" /><File Path=".gitattributes" /><File Path=".gitignore" />
     <File Path="LICENSE" /><File Path="README.md" /><File Path="SESSION.md" />
   </Folder>
   <Folder Name="/Resources/" />

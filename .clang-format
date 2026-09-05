@@ -1,0 +1,6 @@
+BasedOnStyle: Microsoft
+UseTab: Never
+IndentWidth: 2
+TabWidth: 2
+ContinuationIndentWidth: 4
+ColumnLimit: 0

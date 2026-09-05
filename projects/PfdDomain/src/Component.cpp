@@ -1,10 +1,11 @@
 #include "pfd/domain/Component.hpp"
 
-namespace pfd::domain {
+namespace pfd::domain
+{
 
 std::string_view component_name() noexcept
 {
-    return "PfdDomain";
+  return "PfdDomain";
 }
 
-}
+} // namespace pfd::domain

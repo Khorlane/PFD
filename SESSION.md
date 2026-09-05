@@ -463,3 +463,11 @@ The existing Python database-build runner may remain for schema builds, validati
 - Do not routinely spend compute on the complete test suite, every build configuration, or broad regression runs.
 - The user will perform routine builds, interactive testing, and additional verification as desired.
 - Record exactly what automated verification was performed in the project log.
+
+## 24. Source indentation
+
+- PFD-owned source code uses spaces only; tabs are prohibited.
+- Indent each code level with 2 spaces.
+- `.editorconfig` defines the repository-wide whitespace defaults.
+- `.clang-format` defines C++ formatting with 2-space indentation and no tabs.
+- Third-party files under `external` remain vendor-controlled and are exempt from PFD formatting rules.

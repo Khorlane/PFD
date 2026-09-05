@@ -1,10 +1,11 @@
 #include "pfd/platform/Component.hpp"
 
-namespace pfd::platform {
+namespace pfd::platform
+{
 
 std::string_view component_name() noexcept
 {
-    return "PfdPlatform.Windows";
+  return "PfdPlatform.Windows";
 }
 
-}
+} // namespace pfd::platform

@@ -5,5 +5,5 @@
 class CPfdDesktopApp final : public CWinApp
 {
 public:
-    BOOL InitInstance() override;
+  BOOL InitInstance() override;
 };

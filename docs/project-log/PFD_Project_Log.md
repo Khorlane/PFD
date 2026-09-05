@@ -223,3 +223,31 @@ Results:
 - Asynchronous and pipeline-mode libpq operations.
 - Connection pooling.
 - PFD schema creation and business repositories.
+
+## 2026-09-05 17:38:27 -04:00 — Retrofitted 2-space source indentation
+
+### Completed
+
+- Established spaces-only indentation with 2 spaces per code level for PFD-owned source code.
+- Added repository-wide indentation defaults to `.editorconfig`.
+- Added `.clang-format` for PFD C++ with `UseTab: Never` and `IndentWidth: 2`.
+- Applied the C++ formatter to all PFD-owned `.cpp`, `.hpp`, and `.h` files under `projects`.
+- Mechanically converted existing 4-space indentation levels to 2-space levels in PFD-owned PostgreSQL SQL and Python database tooling.
+- Left third-party PostgreSQL headers, binaries, and vendor notices under `external` unchanged.
+- Added `.clang-format` to the Visual Studio solution Resources view.
+- Recorded the rule in `SESSION.md`, section 24.
+- Refreshed database-build manifest hashes for SQL files whose whitespace changed. Change `0002` required no hash update because its content already conformed.
+
+### Focused verification performed
+
+- `clang-format --dry-run --Werror` across PFD C++ source: passed.
+- Tab scan across PFD-owned project, database, tool, build, and configuration files: passed with no tabs.
+- Python database-runner syntax compilation: passed.
+- Bootstrap, numbered-change, and reference-data manifest checksum validation: passed.
+- Focused `PfdTests` Debug/x64 build: passed.
+- Existing single PostgreSQL access-layer smoke check: passed.
+- Release and broad regression tests were intentionally not run.
+
+### Database effect
+
+No SQL was executed against `pfd_dev` as part of the formatting retrofit. No schemas or tables were created or changed.

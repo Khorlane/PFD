@@ -6,11 +6,11 @@
 \endif
 
 SELECT CASE
-         WHEN :'test_database_name' ~ '^pfd_test_[a-z0-9_]+$' THEN 1
-         ELSE 1 / 0
-       END AS validated_disposable_database_name;
+     WHEN :'test_database_name' ~ '^pfd_test_[a-z0-9_]+$' THEN 1
+     ELSE 1 / 0
+     END AS validated_disposable_database_name;
 
 SELECT format(
-    'CREATE DATABASE %I OWNER pfd_database_owner TEMPLATE template0 ENCODING ''UTF8''',
-    :'test_database_name'
+  'CREATE DATABASE %I OWNER pfd_database_owner TEMPLATE template0 ENCODING ''UTF8''',
+  :'test_database_name'
 ) \gexec

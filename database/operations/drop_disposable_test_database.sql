@@ -6,9 +6,9 @@
 \endif
 
 SELECT CASE
-         WHEN :'test_database_name' ~ '^pfd_test_[a-z0-9_]+$' THEN 1
-         ELSE 1 / 0
-       END AS validated_disposable_database_name;
+     WHEN :'test_database_name' ~ '^pfd_test_[a-z0-9_]+$' THEN 1
+     ELSE 1 / 0
+     END AS validated_disposable_database_name;
 
 SELECT pg_terminate_backend(pid)
   FROM pg_stat_activity

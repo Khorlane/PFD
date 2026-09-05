@@ -21,38 +21,38 @@ GRANT USAGE ON SCHEMA core TO pfd_change_executor, pfd_application, pfd_reportin
 GRANT SELECT ON core.database_change TO pfd_change_executor;
 
 GRANT SELECT ON core.company, core.principal_type, core.unit_class,
-                core.business_area, core.transaction_type, core.role_code,
-                core.unit_of_measure, core.approval_authority
-    TO pfd_application;
+        core.business_area, core.transaction_type, core.role_code,
+        core.unit_of_measure, core.approval_authority
+  TO pfd_application;
 GRANT SELECT ON core.number_sequence TO pfd_application;
 GRANT EXECUTE ON FUNCTION core.allocate_business_number(text, text) TO pfd_application;
 
 GRANT SELECT ON core.company, core.principal_type, core.unit_class,
-                core.business_area, core.transaction_type, core.role_code,
-                core.unit_of_measure
-    TO pfd_reporting;
+        core.business_area, core.transaction_type, core.role_code,
+        core.unit_of_measure
+  TO pfd_reporting;
 
 GRANT SELECT ON ALL TABLES IN SCHEMA core TO pfd_support_readonly;
 
 ALTER DEFAULT PRIVILEGES FOR ROLE pfd_database_owner IN SCHEMA core
-    REVOKE ALL ON TABLES FROM PUBLIC;
+  REVOKE ALL ON TABLES FROM PUBLIC;
 ALTER DEFAULT PRIVILEGES FOR ROLE pfd_database_owner IN SCHEMA core
-    REVOKE ALL ON FUNCTIONS FROM PUBLIC;
+  REVOKE ALL ON FUNCTIONS FROM PUBLIC;
 
 DO $pfd$
 DECLARE
-    schema_name text;
+  schema_name text;
 BEGIN
-    FOREACH schema_name IN ARRAY ARRAY[
-        'party', 'simulation', 'hr', 'product', 'sales', 'credit', 'purchasing',
-        'inventory', 'warehouse', 'transport', 'quality', 'service', 'finance',
-        'reporting', 'audit', 'staging'
-    ]
-    LOOP
-        EXECUTE format('REVOKE ALL ON SCHEMA %I FROM PUBLIC', schema_name);
-        EXECUTE format('GRANT USAGE ON SCHEMA %I TO pfd_application', schema_name);
-        EXECUTE format('ALTER DEFAULT PRIVILEGES FOR ROLE pfd_database_owner IN SCHEMA %I REVOKE ALL ON TABLES FROM PUBLIC', schema_name);
-        EXECUTE format('ALTER DEFAULT PRIVILEGES FOR ROLE pfd_database_owner IN SCHEMA %I REVOKE ALL ON FUNCTIONS FROM PUBLIC', schema_name);
-    END LOOP;
+  FOREACH schema_name IN ARRAY ARRAY[
+    'party', 'simulation', 'hr', 'product', 'sales', 'credit', 'purchasing',
+    'inventory', 'warehouse', 'transport', 'quality', 'service', 'finance',
+    'reporting', 'audit', 'staging'
+  ]
+  LOOP
+    EXECUTE format('REVOKE ALL ON SCHEMA %I FROM PUBLIC', schema_name);
+    EXECUTE format('GRANT USAGE ON SCHEMA %I TO pfd_application', schema_name);
+    EXECUTE format('ALTER DEFAULT PRIVILEGES FOR ROLE pfd_database_owner IN SCHEMA %I REVOKE ALL ON TABLES FROM PUBLIC', schema_name);
+    EXECUTE format('ALTER DEFAULT PRIVILEGES FOR ROLE pfd_database_owner IN SCHEMA %I REVOKE ALL ON FUNCTIONS FROM PUBLIC', schema_name);
+  END LOOP;
 END
 $pfd$;

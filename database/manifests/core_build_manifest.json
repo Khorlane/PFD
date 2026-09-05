@@ -6,21 +6,21 @@
   "minimum_postgresql_major": 15,
   "expected_final_change": "0010",
   "bootstrap": [
-    {"file": "bootstrap/00_create_cluster_roles.sql", "sha256": "97001c2f404c21ad82bba2ed49551c68a8e9002bbdcc88aa5fc3e517ad2bb11b"},
-    {"file": "bootstrap/01_create_pfd_database.sql", "sha256": "0b9d86b8a381b253853940652a8cc0c063469c609c211406ee28740e312ed500"},
-    {"file": "bootstrap/02_verify_bootstrap.sql", "sha256": "a1c6c8c7d47c8dec1807f45c61040a30f6167e4e8e8489e16bedd38e9da413b2"}
+    {"file": "bootstrap/00_create_cluster_roles.sql", "sha256": "ff5ce12fe655494091f4b722556bcaa640c8cb034c111c7010b6bb15236d0f92"},
+    {"file": "bootstrap/01_create_pfd_database.sql", "sha256": "5886b583863bf8b0b5d2f79a5dec64a98a960651d35341e7be3beeb859e5b67c"},
+    {"file": "bootstrap/02_verify_bootstrap.sql", "sha256": "693cb40309acb3d6db0ab9ae655c75e37926c968a74a8cbe4c78ae6734f407f9"}
   ],
   "changes": [
-    {"number": "0001", "name": "Create Core Change History", "file": "changes/0001-0010-core/0001_create_core_change_history.sql", "sha256": "8079b364edb28f47d22974ed95a01bf546613f60199e6caeb97eb92389ab6c56"},
+    {"number": "0001", "name": "Create Core Change History", "file": "changes/0001-0010-core/0001_create_core_change_history.sql", "sha256": "369ecad60fc6df99db7f5e2c7cccf2f6866de926aa6d3cca2ebfec96969a7238"},
     {"number": "0002", "name": "Create Functional Schemas", "file": "changes/0001-0010-core/0002_create_functional_schemas.sql", "sha256": "e0ff2850df47dc2939681579de71b14be9977618b82793efbf5da111888e4752"},
-    {"number": "0003", "name": "Create Core Reference Tables", "file": "changes/0001-0010-core/0003_create_core_reference_tables.sql", "sha256": "f55c6b153056e55bf0980bc356c0223e089e02578514824ae9109afc078cd5fc"},
-    {"number": "0004", "name": "Create Core Principal", "file": "changes/0001-0010-core/0004_create_core_principal.sql", "sha256": "8b97b73c712e7a4f90b89d4cebec7d36dffb4a3de225721223d0829e2c49d49d"},
-    {"number": "0005", "name": "Create Core Company", "file": "changes/0001-0010-core/0005_create_core_company.sql", "sha256": "b89e9d72175a2d06bbe8565516dce3f196ff14a4926e3a8b7405a8df94e833d4"},
-    {"number": "0006", "name": "Create Core Unit of Measure", "file": "changes/0001-0010-core/0006_create_core_unit_of_measure.sql", "sha256": "658f54a301101ab91255e3807ba24a7598aa704d43821b7a36777c65d13a552a"},
-    {"number": "0007", "name": "Create Core Approval Authority", "file": "changes/0001-0010-core/0007_create_core_approval_authority.sql", "sha256": "2f3ffcae9a5b89c464af0f4d5236662afbca6445f3c9420cae24fb39d8d82b69"},
-    {"number": "0008", "name": "Create Core Number Sequence", "file": "changes/0001-0010-core/0008_create_core_number_sequence.sql", "sha256": "355870e04396cfb821a8727341c151d20e240faa362072afba8f6e76b816205b"},
-    {"number": "0009", "name": "Seed Core Reference Data", "file": "changes/0001-0010-core/0009_seed_core_reference_data.sql", "sha256": "ad465b18473af00756b7ecaf6021deb7e74a97c3542a9bb269de83bf82b996a4"},
-    {"number": "0010", "name": "Apply Core Comments and Grants", "file": "changes/0001-0010-core/0010_apply_core_comments_and_grants.sql", "sha256": "03d47143b12c9c5c2196d81d8cd1c6063823fdbd844e3787004e4788b8182a36"}
+    {"number": "0003", "name": "Create Core Reference Tables", "file": "changes/0001-0010-core/0003_create_core_reference_tables.sql", "sha256": "033c8ed0869c14cd7eb706fd589be55976dca37eb74e96663d7968af3df3efc0"},
+    {"number": "0004", "name": "Create Core Principal", "file": "changes/0001-0010-core/0004_create_core_principal.sql", "sha256": "a814ec7ee19005466e5f9413c08a53274d69c8838331f428338d94d01dcaeaa3"},
+    {"number": "0005", "name": "Create Core Company", "file": "changes/0001-0010-core/0005_create_core_company.sql", "sha256": "7de27f6a1bf5c893632479aeee63f739396def91688c922715aeb6905bc1b028"},
+    {"number": "0006", "name": "Create Core Unit of Measure", "file": "changes/0001-0010-core/0006_create_core_unit_of_measure.sql", "sha256": "5016afa339685149906ef7623c4918cea82a468443305cae4bbf8450685897a7"},
+    {"number": "0007", "name": "Create Core Approval Authority", "file": "changes/0001-0010-core/0007_create_core_approval_authority.sql", "sha256": "89599a0ceac8d017dc7f44a928c16b721f5bf6da9d0ebf95e4d8aee86796ddb0"},
+    {"number": "0008", "name": "Create Core Number Sequence", "file": "changes/0001-0010-core/0008_create_core_number_sequence.sql", "sha256": "f553d88052828fabf397c08dd3626dbf7b902b9300c3e441ddaadcaca04e07b4"},
+    {"number": "0009", "name": "Seed Core Reference Data", "file": "changes/0001-0010-core/0009_seed_core_reference_data.sql", "sha256": "033c2efd6a7f2c1e3576792e180dfdfc287434ff18cb83ada7c120667cd12edb"},
+    {"number": "0010", "name": "Apply Core Comments and Grants", "file": "changes/0001-0010-core/0010_apply_core_comments_and_grants.sql", "sha256": "2e8b0fe6261f3a52ef4cf4e686a894538047e214883ee6438d82819cf65e42f0"}
   ],
   "reference_data": [
     {"file": "reference-data/core/business_area.csv", "sha256": "f7e75659c649854f610311ddde26f01687ee76e8580add17af4b3c7c1b70a45f"},
