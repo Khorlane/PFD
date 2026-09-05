@@ -1,0 +1,9 @@
+role_code,display_name,description,sort_order,is_active,effective_from
+GENERAL_MANAGER,General Manager,General management authority,10,true,2026-01-01
+SALES_MANAGER,Sales Manager,Sales and commercial authority,20,true,2026-01-01
+OPERATIONS_PURCHASING_MANAGER,Operations/Purchasing Manager,Operations and purchasing authority,30,true,2026-01-01
+FINANCE_ADMIN_MANAGER,Finance/Admin Manager,Finance and administration authority,40,true,2026-01-01
+DATABASE_ADMINISTRATOR,Database Administrator,Controlled database administration,50,true,2026-01-01
+COMPUTER_OPERATOR,Computer Operator,Controlled operational processing,60,true,2026-01-01
+DATABASE_BUILD_PROCESS,Database Build Process,Approved database build execution,70,true,2026-01-01
+APPLICATION_SERVICE,Application Service,Approved application service processing,80,true,2026-01-01

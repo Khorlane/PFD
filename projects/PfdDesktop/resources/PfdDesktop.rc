@@ -1,0 +1,8 @@
+#include "../src/resource.h"
+#include <afxres.h>
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE "Food Distribution Simulator"
+    IDS_HELLO_TEXT "Hello from the Food Distribution Simulator"
+END

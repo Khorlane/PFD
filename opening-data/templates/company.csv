@@ -1,0 +1,2 @@
+company_code,legal_name,display_name,default_currency_code,business_timezone,fiscal_year_start_month,is_active
+<company code>,<business name>,<business display name>,<currency code>,<business timezone>,<fiscal year start month>,true

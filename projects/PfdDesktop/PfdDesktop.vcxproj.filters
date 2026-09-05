@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files"><UniqueIdentifier>{673055F6-8BAD-43F8-9C7C-FCB394896E78}</UniqueIdentifier></Filter>
+    <Filter Include="Source Files"><UniqueIdentifier>{3FA86CC8-96CD-4B7F-A133-5E3A3278FD99}</UniqueIdentifier></Filter>
+    <Filter Include="Resource Files"><UniqueIdentifier>{8BC46570-BF1A-4183-8F80-086E528B40B0}</UniqueIdentifier></Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\framework.h"><Filter>Header Files</Filter></ClInclude>
+    <ClInclude Include="src\MainFrame.h"><Filter>Header Files</Filter></ClInclude>
+    <ClInclude Include="src\PfdDesktop.h"><Filter>Header Files</Filter></ClInclude>
+    <ClInclude Include="src\resource.h"><Filter>Header Files</Filter></ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\MainFrame.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="src\PfdDesktop.cpp"><Filter>Source Files</Filter></ClCompile>
+  </ItemGroup>
+  <ItemGroup><ResourceCompile Include="resources\PfdDesktop.rc"><Filter>Resource Files</Filter></ResourceCompile></ItemGroup>
+</Project>

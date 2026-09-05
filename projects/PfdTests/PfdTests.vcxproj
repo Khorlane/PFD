@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64"><Configuration>Debug</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64"><Configuration>Release</Configuration><Platform>x64</Platform></ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals"><VCProjectVersion>18.0</VCProjectVersion><Keyword>Win32Proj</Keyword><ProjectGuid>{4FC2348B-E138-4DCC-B514-52C931D2774C}</ProjectGuid><RootNamespace>PfdTests</RootNamespace><VCToolsVersion>14.50.35717</VCToolsVersion></PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration"><ConfigurationType>Application</ConfigurationType><UseDebugLibraries>true</UseDebugLibraries><PlatformToolset>v145</PlatformToolset><CharacterSet>Unicode</CharacterSet></PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration"><ConfigurationType>Application</ConfigurationType><UseDebugLibraries>false</UseDebugLibraries><PlatformToolset>v145</PlatformToolset><CharacterSet>Unicode</CharacterSet><WholeProgramOptimization>true</WholeProgramOptimization></PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets"><Import Project="$(ProjectDir)..\..\build\visual-studio\Pfd.Windows.props" /></ImportGroup>
+  <ItemDefinitionGroup><ClCompile><AdditionalIncludeDirectories>$(ProjectDir)..\PfdDomain\include;$(ProjectDir)..\PfdDatabase\include;$(ProjectDir)..\PfdSimulation\include;$(ProjectDir)..\PfdReporting\include;$(ProjectDir)..\PfdPlatform\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories></ClCompile><Link><SubSystem>Console</SubSystem></Link></ItemDefinitionGroup>
+  <ItemGroup><ClCompile Include="src\main.cpp" /></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PfdDatabase\PfdDatabase.vcxproj"><Project>{D14C6015-FCF6-47B4-990A-03364A8CF847}</Project></ProjectReference>
+    <ProjectReference Include="..\PfdDomain\PfdDomain.vcxproj"><Project>{0681FC1C-B1AD-4FCA-B0DE-BF751AA35046}</Project></ProjectReference>
+    <ProjectReference Include="..\PfdPlatform\PfdPlatform.vcxproj"><Project>{F3E658E0-6A9F-405D-881A-D55E204CB8C8}</Project></ProjectReference>
+    <ProjectReference Include="..\PfdReporting\PfdReporting.vcxproj"><Project>{F08E4AF0-D6B9-4501-8ED4-FE53F0953700}</Project></ProjectReference>
+    <ProjectReference Include="..\PfdSimulation\PfdSimulation.vcxproj"><Project>{1FF421B1-4277-4009-95A0-40D257EA963A}</Project></ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

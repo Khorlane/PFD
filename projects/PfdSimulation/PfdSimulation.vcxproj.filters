@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup><Filter Include="Public Headers"><UniqueIdentifier>{21DD7E04-C575-4811-927D-3F71CE35C5B1}</UniqueIdentifier></Filter><Filter Include="Source Files"><UniqueIdentifier>{6DFA9947-E720-474B-890E-2FB5EB752CE0}</UniqueIdentifier></Filter></ItemGroup>
+  <ItemGroup><ClInclude Include="include\pfd\simulation\Component.hpp"><Filter>Public Headers</Filter></ClInclude></ItemGroup>
+  <ItemGroup><ClCompile Include="src\Component.cpp"><Filter>Source Files</Filter></ClCompile></ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+principal_type_code,display_name,description,sort_order,is_active,effective_from
+PERSON,Person,Authenticated human Principal,10,true,2026-01-01
+SERVICE,Service,Application or integration service,20,true,2026-01-01
+SCHEDULED_PROCESS,Scheduled Process,Scheduled processing actor,30,true,2026-01-01
+DATABASE_BUILD,Database Build,Controlled database build process,40,true,2026-01-01
+RECOVERY_PROCESS,Recovery Process,Controlled restart or recovery actor,50,true,2026-01-01

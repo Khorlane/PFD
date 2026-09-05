@@ -1,0 +1,55 @@
+{
+  "manifest_format_version": "1",
+  "name": "pfd_postgresql_core_build",
+  "version": "1.0.0",
+  "published_on": "2026-09-04",
+  "minimum_postgresql_major": 15,
+  "expected_final_change": "0010",
+  "bootstrap": [
+    {"file": "bootstrap/00_create_cluster_roles.sql", "sha256": "4fe361575c9e9629b4442a07b8b0520a3743a39a4261ba0c8b0bf2f1c9b7151c"},
+    {"file": "bootstrap/01_create_pfd_database.sql", "sha256": "a17ab8dc1063e5b3d9642aa9ca862154b5c85d0b566dca4eda0652622b538884"},
+    {"file": "bootstrap/02_verify_bootstrap.sql", "sha256": "4c8d294b66ae1c6a03d84f837ace8a03be7a1ed37223522990d0438b4cf91bd3"}
+  ],
+  "changes": [
+    {"number": "0001", "name": "Create Core Change History", "file": "changes/0001-0010-core/0001_create_core_change_history.sql", "sha256": "8079b364edb28f47d22974ed95a01bf546613f60199e6caeb97eb92389ab6c56"},
+    {"number": "0002", "name": "Create Functional Schemas", "file": "changes/0001-0010-core/0002_create_functional_schemas.sql", "sha256": "e0ff2850df47dc2939681579de71b14be9977618b82793efbf5da111888e4752"},
+    {"number": "0003", "name": "Create Core Reference Tables", "file": "changes/0001-0010-core/0003_create_core_reference_tables.sql", "sha256": "f55c6b153056e55bf0980bc356c0223e089e02578514824ae9109afc078cd5fc"},
+    {"number": "0004", "name": "Create Core Principal", "file": "changes/0001-0010-core/0004_create_core_principal.sql", "sha256": "8b97b73c712e7a4f90b89d4cebec7d36dffb4a3de225721223d0829e2c49d49d"},
+    {"number": "0005", "name": "Create Core Company", "file": "changes/0001-0010-core/0005_create_core_company.sql", "sha256": "b89e9d72175a2d06bbe8565516dce3f196ff14a4926e3a8b7405a8df94e833d4"},
+    {"number": "0006", "name": "Create Core Unit of Measure", "file": "changes/0001-0010-core/0006_create_core_unit_of_measure.sql", "sha256": "658f54a301101ab91255e3807ba24a7598aa704d43821b7a36777c65d13a552a"},
+    {"number": "0007", "name": "Create Core Approval Authority", "file": "changes/0001-0010-core/0007_create_core_approval_authority.sql", "sha256": "2f3ffcae9a5b89c464af0f4d5236662afbca6445f3c9420cae24fb39d8d82b69"},
+    {"number": "0008", "name": "Create Core Number Sequence", "file": "changes/0001-0010-core/0008_create_core_number_sequence.sql", "sha256": "355870e04396cfb821a8727341c151d20e240faa362072afba8f6e76b816205b"},
+    {"number": "0009", "name": "Seed Core Reference Data", "file": "changes/0001-0010-core/0009_seed_core_reference_data.sql", "sha256": "ad465b18473af00756b7ecaf6021deb7e74a97c3542a9bb269de83bf82b996a4"},
+    {"number": "0010", "name": "Apply Core Comments and Grants", "file": "changes/0001-0010-core/0010_apply_core_comments_and_grants.sql", "sha256": "03d47143b12c9c5c2196d81d8cd1c6063823fdbd844e3787004e4788b8182a36"}
+  ],
+  "reference_data": [
+    {"file": "reference-data/core/business_area.csv", "sha256": "f7e75659c649854f610311ddde26f01687ee76e8580add17af4b3c7c1b70a45f"},
+    {"file": "reference-data/core/principal_type.csv", "sha256": "5f9e63a825b33cd9763c281bbf0ac8a945184ccf9f1d19d1afb885005e807e83"},
+    {"file": "reference-data/core/principal.csv", "sha256": "69aaf52873e8c6cccb81e9dea2f3ec1dd36949bfd502b5fc3c7ecd1528f8dc91"},
+    {"file": "reference-data/core/role_code.csv", "sha256": "5c8debe6dcaa0c7004d6eea054cfa144237c8acc31893047bac9152d91b671f0"},
+    {"file": "reference-data/core/transaction_type.csv", "sha256": "aa35a5e9217404ed2107a8d860f377ac43b06ee77bfe7f0f0ad0a536800e69d5"},
+    {"file": "reference-data/core/unit_class.csv", "sha256": "d26d08059820cfa7585bf0727effd8d824cd5cf450d348711128cfc83d5a66eb"},
+    {"file": "reference-data/core/unit_of_measure.csv", "sha256": "1a22c0a0cfb87a69a03bd30bcb1d0882468d0bb4108c41fab300b4d28ede4c1c"}
+  ],
+  "verification": [
+    {"file": "verification/verify_change_history.sql", "sha256": "874ab9edf07138fbde69251fce8c3ecb0166d30bb268318a87d30dbf57f02ca2"},
+    {"file": "verification/verify_core_build.sql", "sha256": "ec9f218e7c5aa8ffed6a5d7ef931e8a6c440a5c7aef824749eb5f81d01bdcc91"},
+    {"file": "verification/verify_core_constraints.sql", "sha256": "441b0eb32bef42342f670f67028e8ce135d582f78a42e6bccc428d3e8222dcaa"},
+    {"file": "verification/verify_core_indexes.sql", "sha256": "a0b435b320c60d7905293cc550eff7eb680d8edd4e6fbd3ece79ea6ad535a99c"},
+    {"file": "verification/verify_core_privileges.sql", "sha256": "d8135ac213366f47b9ab99e6a7a84b1ff15a09950c75049f6168be6b3740d945"},
+    {"file": "verification/verify_core_reference_data.sql", "sha256": "fee68b54577a17113e52fa2533f7f8fdcdf8793e5843ef083877aa97ac65eb1c"},
+    {"file": "verification/verify_core_tables.sql", "sha256": "ae3e6ed6b3069d6c890ea13d302aa51efaf78cb26823d7a385441932900e6854"},
+    {"file": "verification/verify_no_surrogate_keys.sql", "sha256": "65b9957c2aaf240daf858570bab7076d85eaab5fe71b5b130dca1c969a2e41e5"},
+    {"file": "verification/verify_schemas.sql", "sha256": "3d92192004037cb93af8bcef1bab80f1a0e11c8a52630f5ada2292fe0811fce3"}
+  ],
+  "tests": [
+    {"file": "tests/core/run_core_tests.sql", "sha256": "a77b3f7f6acb09638d038ba3a75f6dd075ecab5392605f607adba6ad49d1583b"},
+    {"file": "tests/core/test_change_history_append_only.sql", "sha256": "20e8362daccce7a08f280de135ad5f59b05c9106c3ed967d0f7b86d9bca63a04"},
+    {"file": "tests/core/test_check_constraints.sql", "sha256": "eb6620ed6de9b5d582590e8cc11a5c6590abae178141d70078b5af0621408ab8"},
+    {"file": "tests/core/test_foreign_keys.sql", "sha256": "5c71735a38e42fe7461df883f35a3b33909c8a6301c812d5724f9c4c4df82a2e"},
+    {"file": "tests/core/test_natural_keys.sql", "sha256": "b7138761f6312d8a350f3cccb074cc3a9fb0c8e2184d1bb03eaad94452a4ba52"},
+    {"file": "tests/core/test_number_allocation.sql", "sha256": "c196f7ab881dc858703b04491969ce83ba8b0964751c93b544c30fc3221b096a"},
+    {"file": "tests/core/test_reference_inactivation.sql", "sha256": "e4b21b5b80f6a88612a4f930eeb635cfabca6d3929ae19a6ac50573d66187d6d"},
+    {"file": "tests/core/test_unauthorized_access.sql", "sha256": "f2b23705b7146676408288b19c0aa54bd05c00b43bd7936520cfea5dca48c3a6"}
+  ]
+}

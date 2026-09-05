@@ -1,0 +1,6 @@
+unit_class_code,display_name,description,sort_order,is_active,effective_from
+COUNT,Count,"Each, pack, case, or pallet quantity",10,true,2026-01-01
+WEIGHT,Weight,Fixed recorded weight; not catch-weight pricing,20,true,2026-01-01
+VOLUME,Volume,Volume or cube measure,30,true,2026-01-01
+TIME,Time,Time or duration measure,40,true,2026-01-01
+DISTANCE,Distance,"Routing, mileage, or travel distance",50,true,2026-01-01

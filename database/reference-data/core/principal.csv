@@ -1,0 +1,5 @@
+principal_code,principal_type_code,display_name,external_subject,is_active
+DATABASE_BUILD,DATABASE_BUILD,PFD Database Build,,true
+SYSTEM_SERVICE,SERVICE,PFD System Service,,true
+SCHEDULED_PROCESS,SCHEDULED_PROCESS,PFD Scheduled Process,,true
+RECOVERY_PROCESS,RECOVERY_PROCESS,PFD Recovery Process,,true

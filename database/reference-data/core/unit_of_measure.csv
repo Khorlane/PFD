@@ -1,0 +1,10 @@
+unit_code,unit_name,unit_class_code,decimal_scale,is_active
+EACH,Each,COUNT,0,true
+PACK,Pack,COUNT,0,true
+CASE,Case,COUNT,0,true
+PALLET,Pallet,COUNT,0,true
+POUND,Pound,WEIGHT,4,true
+OUNCE,Ounce,WEIGHT,4,true
+CUBIC_FOOT,Cubic Foot,VOLUME,6,true
+MILE,Mile,DISTANCE,4,true
+HOUR,Hour,TIME,4,true

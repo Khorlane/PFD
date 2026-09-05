@@ -1,0 +1,13 @@
+business_area_code,display_name,description,sort_order,is_active,effective_from
+GENERAL_MANAGEMENT,General Management,Company-wide management and owner governance,10,true,2026-01-01
+SALES,Sales,"Customer development, pricing, and commercial responsibility",20,true,2026-01-01
+CREDIT,Credit,"Customer credit, collection, and exposure control",30,true,2026-01-01
+PURCHASING,Purchasing,Supplier and purchasing responsibility,40,true,2026-01-01
+INVENTORY,Inventory,"Inventory quantity, status, and valuation responsibility",50,true,2026-01-01
+WAREHOUSE,Warehouse,"Receiving, storage, picking, staging, and loading",60,true,2026-01-01
+TRANSPORTATION,Transportation,"Fleet, dispatch, routing, and delivery",70,true,2026-01-01
+QUALITY,Quality,Food safety and quality control,80,true,2026-01-01
+CUSTOMER_SERVICE,Customer Service,"Customer order support, cases, and returns",90,true,2026-01-01
+FINANCE,Finance,"Accounting, cash, receivables, payables, assets, and reporting",100,true,2026-01-01
+HUMAN_RESOURCES,Human Resources,"Employment, scheduling, time, and payroll governance",110,true,2026-01-01
+INFORMATION_TECHNOLOGY,Information Technology,"Systems, database, security, and recovery",120,true,2026-01-01

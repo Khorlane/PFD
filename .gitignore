@@ -1,0 +1,52 @@
+# Visual Studio and MSBuild local/generated files
+.vs/
+*.suo
+*.user
+*.vcxproj.user
+*.VC.db
+*.VC.VC.opendb
+[Dd]ebug/
+[Rr]elease/
+x64/
+out/
+ipch/
+*.obj
+*.pch
+*.pdb
+*.ilk
+*.idb
+*.tlog
+*.lastbuildstate
+
+# Python local/generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Private configuration and opening data
+config/local/
+config/private/
+opening-data/local/
+opening-data/private/
+.env
+.env.*
+!.env.example
+*.pgpass
+pg_service.conf
+
+# Private/generated business artifacts
+*.backup
+*.dump
+*.dmp
+*.log
+*.tmp
+*.bak
+exports/
+reports/
+backups/
+
+# Operating-system files
+Thumbs.db
+Desktop.ini
+.DS_Store

@@ -1,0 +1,97 @@
+<Solution>
+  <Configurations><Platform Name="x64" /></Configurations>
+  <Folder Name="/Applications/"><Project Path="projects/PfdDesktop/PfdDesktop.vcxproj" DefaultStartup="true" Id="5cb86025-0f71-4444-9a2c-302aacdfccdc" /></Folder>
+  <Folder Name="/Libraries/">
+    <Project Path="projects/PfdDatabase/PfdDatabase.vcxproj" Id="d14c6015-fcf6-47b4-990a-03364a8cf847" />
+    <Project Path="projects/PfdDomain/PfdDomain.vcxproj" Id="0681fc1c-b1ad-4fca-b0de-bf751aa35046" />
+    <Project Path="projects/PfdPlatform/PfdPlatform.vcxproj" Id="f3e658e0-6a9f-405d-881a-d55e204cb8c8" />
+    <Project Path="projects/PfdReporting/PfdReporting.vcxproj" Id="f08e4af0-d6b9-4501-8ed4-fe53f0953700" />
+    <Project Path="projects/PfdSimulation/PfdSimulation.vcxproj" Id="1ff421b1-4277-4009-95a0-40d257ea963a" />
+  </Folder>
+  <Folder Name="/Tests/"><Project Path="projects/PfdTests/PfdTests.vcxproj" Id="4fc2348b-e138-4dcc-b514-52c931d2774c" /></Folder>
+  <Folder Name="/Resources/Repository/">
+    <File Path=".editorconfig" /><File Path=".gitattributes" /><File Path=".gitignore" />
+    <File Path="LICENSE" /><File Path="README.md" /><File Path="SESSION.md" />
+  </Folder>
+  <Folder Name="/Resources/" />
+  <Folder Name="/Resources/Build/">
+    <File Path="build/visual-studio/Pfd.Common.props" /><File Path="build/visual-studio/Pfd.Portable.props" />
+    <File Path="build/visual-studio/Pfd.PostgreSQL.props" /><File Path="build/visual-studio/Pfd.Windows.props" />
+  </Folder>
+  <Folder Name="/Resources/Database/" />
+  <Folder Name="/Resources/Database/Bootstrap/">
+    <File Path="database/bootstrap/00_create_cluster_roles.sql" /><File Path="database/bootstrap/01_create_pfd_database.sql" />
+    <File Path="database/bootstrap/02_verify_bootstrap.sql" /><File Path="database/bootstrap/README.md" />
+  </Folder>
+  <Folder Name="/Resources/Database/Changes 0001-0010/">
+    <File Path="database/changes/0001-0010-core/0001_create_core_change_history.sql" />
+    <File Path="database/changes/0001-0010-core/0002_create_functional_schemas.sql" />
+    <File Path="database/changes/0001-0010-core/0003_create_core_reference_tables.sql" />
+    <File Path="database/changes/0001-0010-core/0004_create_core_principal.sql" />
+    <File Path="database/changes/0001-0010-core/0005_create_core_company.sql" />
+    <File Path="database/changes/0001-0010-core/0006_create_core_unit_of_measure.sql" />
+    <File Path="database/changes/0001-0010-core/0007_create_core_approval_authority.sql" />
+    <File Path="database/changes/0001-0010-core/0008_create_core_number_sequence.sql" />
+    <File Path="database/changes/0001-0010-core/0009_seed_core_reference_data.sql" />
+    <File Path="database/changes/0001-0010-core/0010_apply_core_comments_and_grants.sql" />
+  </Folder>
+  <Folder Name="/Resources/Database/Reference Data/">
+    <File Path="database/reference-data/core/business_area.csv" /><File Path="database/reference-data/core/principal.csv" />
+    <File Path="database/reference-data/core/principal_type.csv" /><File Path="database/reference-data/core/role_code.csv" />
+    <File Path="database/reference-data/core/transaction_type.csv" /><File Path="database/reference-data/core/unit_class.csv" />
+    <File Path="database/reference-data/core/unit_of_measure.csv" />
+  </Folder>
+  <Folder Name="/Resources/Database/Verification/">
+    <File Path="database/verification/verify_change_history.sql" /><File Path="database/verification/verify_core_build.sql" />
+    <File Path="database/verification/verify_core_constraints.sql" /><File Path="database/verification/verify_core_indexes.sql" />
+    <File Path="database/verification/verify_core_privileges.sql" /><File Path="database/verification/verify_core_reference_data.sql" />
+    <File Path="database/verification/verify_core_tables.sql" /><File Path="database/verification/verify_no_surrogate_keys.sql" />
+    <File Path="database/verification/verify_schemas.sql" />
+  </Folder>
+  <Folder Name="/Resources/Database/Tests/">
+    <File Path="database/tests/core/run_core_tests.sql" /><File Path="database/tests/core/test_change_history_append_only.sql" />
+    <File Path="database/tests/core/test_check_constraints.sql" /><File Path="database/tests/core/test_foreign_keys.sql" />
+    <File Path="database/tests/core/test_natural_keys.sql" /><File Path="database/tests/core/test_number_allocation.sql" />
+    <File Path="database/tests/core/test_reference_inactivation.sql" /><File Path="database/tests/core/test_unauthorized_access.sql" />
+  </Folder>
+  <Folder Name="/Resources/Database/Operations and Documentation/">
+    <File Path="database/README.md" /><File Path="database/manifests/core_build_manifest.json" />
+    <File Path="database/operations/create_disposable_test_database.sql" /><File Path="database/operations/drop_disposable_test_database.sql" />
+    <File Path="database/operations/README.md" /><File Path="database/documentation/build_acceptance_checklist.md" />
+    <File Path="database/documentation/core_data_dictionary.md" /><File Path="database/documentation/core_privilege_matrix.md" />
+    <File Path="database/releases/0001-0010-core/README.md" /><File Path="database/releases/0001-0010-core/RELEASE_NOTES.md" />
+  </Folder>
+  <Folder Name="/Resources/Documentation/Enterprise/">
+    <File Path="docs/enterprise/PFD_Business_Model_and_Operating_Policies.md" />
+    <File Path="docs/enterprise/PFD_Business_Process_and_Transaction_Lifecycle_Specification.md" />
+    <File Path="docs/enterprise/PFD_Business_to_IT_Capability_Specification.md" />
+    <File Path="docs/enterprise/PFD_Database_Repository_and_Core_Build_Specification.md" />
+    <File Path="docs/enterprise/PFD_Information_Model_and_Record_Ownership_Specification.md" />
+    <File Path="docs/enterprise/PFD_Persistent_Data_Architecture_and_Database_Standards_Specification.md" />
+    <File Path="docs/enterprise/PFD_PostgreSQL_Database_Build_and_Change-Control_Plan.md" />
+    <File Path="docs/enterprise/PFD_Relational_Schema_and_Table_Definition_Specification.md" />
+  </Folder>
+  <Folder Name="/Resources/Documentation/Domains/">
+    <File Path="docs/domains/party-customer/PFD_Party_and_Customer_Domain_Specification.md" /><File Path="docs/domains/party-customer/PFD_Party_and_Customer_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/product/PFD_Product_Domain_Specification.md" /><File Path="docs/domains/product/PFD_Product_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/supplier-purchasing/PFD_Supplier_and_Purchasing_Domain_Specification.md" /><File Path="docs/domains/supplier-purchasing/PFD_Supplier_and_Purchasing_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/inventory/PFD_Inventory_Domain_Specification.md" /><File Path="docs/domains/inventory/PFD_Inventory_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/warehouse/PFD_Warehouse_Operations_Domain_Specification.md" /><File Path="docs/domains/warehouse/PFD_Warehouse_Operations_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/sales-order-management/PFD_Sales_and_Order_Management_Domain_Specification.md" /><File Path="docs/domains/sales-order-management/PFD_Sales_and_Order_Management_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/transportation-delivery/PFD_Transportation_and_Delivery_Domain_Specification.md" /><File Path="docs/domains/transportation-delivery/PFD_Transportation_and_Delivery_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/finance-accounting/PFD_Finance_and_Accounting_Domain_Specification.md" /><File Path="docs/domains/finance-accounting/PFD_Finance_and_Accounting_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/workforce-payroll/PFD_Workforce_and_Payroll_Domain_Specification.md" /><File Path="docs/domains/workforce-payroll/PFD_Workforce_and_Payroll_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/quality-food-safety-recall/PFD_Quality_Food_Safety_and_Recall_Domain_Specification.md" /><File Path="docs/domains/quality-food-safety-recall/PFD_Quality_Food_Safety_and_Recall_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/management-reporting-audit/PFD_Management_Reporting_and_Audit_Domain_Specification.md" /><File Path="docs/domains/management-reporting-audit/PFD_Management_Reporting_and_Audit_PostgreSQL_Build_Specification.md" />
+  </Folder>
+  <Folder Name="/Resources/Documentation/" />
+  <Folder Name="/Resources/Documentation/Cross-Cutting/">
+    <File Path="docs/decisions/PFD_Public_Sample_and_Private_Configuration_Decision.md" />
+    <File Path="docs/implementation/PFD_Integrated_Design_Validation_and_Implementation_Readiness_Specification.md" />
+    <File Path="docs/opening-baseline/PFD_Opening_Business_Data_and_Grand_Opening_Baseline_Specification.md" />
+    <File Path="docs/simulation/PFD_Simulation_Execution_and_Scenario_Control_Specification.md" />
+    <File Path="docs/source-material/Design.md" />
+  </Folder>
+  <Folder Name="/Resources/Opening Data/"><File Path="opening-data/templates/company.csv" /></Folder>
+  <Folder Name="/Resources/Tools/"><File Path="tools/database-build/pfd_db_build.py" /><File Path="tools/database-build/README.md" /></Folder>
+</Solution>
