@@ -452,3 +452,14 @@ The existing Python database-build runner may remain for schema builds, validati
 - Private connection configuration belongs under `%LOCALAPPDATA%\PFD\config` and remains outside source control.
 - PFD documentation and runtime configuration use PFD-specific locations and remain independent of unrelated product or organization directories.
 - Creating the local database and roles does not authorize creation of PFD schemas, tables, reference data, or opening data.
+
+## 23. Lightweight verification policy
+
+- PFD is an exploratory simulation project rather than a production application.
+- Prioritize application implementation over extensive test infrastructure or coverage targets.
+- Add only small, high-value checks when a risky foundation or observed defect justifies them.
+- Avoid elaborate mocks, repetitive unit tests, and large fixture systems unless a concrete need develops.
+- By default, perform one focused Debug/x64 build and the directly relevant smoke check after a change.
+- Do not routinely spend compute on the complete test suite, every build configuration, or broad regression runs.
+- The user will perform routine builds, interactive testing, and additional verification as desired.
+- Record exactly what automated verification was performed in the project log.

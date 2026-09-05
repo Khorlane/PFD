@@ -9,7 +9,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration"><ConfigurationType>Application</ConfigurationType><UseDebugLibraries>true</UseDebugLibraries><PlatformToolset>v145</PlatformToolset><CharacterSet>Unicode</CharacterSet></PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration"><ConfigurationType>Application</ConfigurationType><UseDebugLibraries>false</UseDebugLibraries><PlatformToolset>v145</PlatformToolset><CharacterSet>Unicode</CharacterSet><WholeProgramOptimization>true</WholeProgramOptimization></PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="PropertySheets"><Import Project="$(ProjectDir)..\..\build\visual-studio\Pfd.Windows.props" /></ImportGroup>
+  <ImportGroup Label="PropertySheets"><Import Project="$(ProjectDir)..\..\build\visual-studio\Pfd.Windows.props" /><Import Project="$(ProjectDir)..\..\build\visual-studio\Pfd.PostgreSQL.props" /></ImportGroup>
   <ItemDefinitionGroup><ClCompile><AdditionalIncludeDirectories>$(ProjectDir)..\PfdDomain\include;$(ProjectDir)..\PfdDatabase\include;$(ProjectDir)..\PfdSimulation\include;$(ProjectDir)..\PfdReporting\include;$(ProjectDir)..\PfdPlatform\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories></ClCompile><Link><SubSystem>Console</SubSystem></Link></ItemDefinitionGroup>
   <ItemGroup><ClCompile Include="src\main.cpp" /></ItemGroup>
   <ItemGroup>

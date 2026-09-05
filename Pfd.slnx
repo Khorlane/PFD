@@ -18,6 +18,21 @@
     <File Path="build/visual-studio/Pfd.Common.props" /><File Path="build/visual-studio/Pfd.Portable.props" />
     <File Path="build/visual-studio/Pfd.PostgreSQL.props" /><File Path="build/visual-studio/Pfd.Windows.props" />
   </Folder>
+  <Folder Name="/Resources/External/PostgreSQL 16 x64/">
+    <File Path="external/postgresql/16/windows-x64/README.md" />
+    <File Path="external/postgresql/16/windows-x64/include/libpq-fe.h" />
+    <File Path="external/postgresql/16/windows-x64/include/pg_config_ext.h" />
+    <File Path="external/postgresql/16/windows-x64/include/postgres_ext.h" />
+    <File Path="external/postgresql/16/windows-x64/lib/libpq.lib" />
+    <File Path="external/postgresql/16/windows-x64/bin/libpq.dll" />
+    <File Path="external/postgresql/16/windows-x64/bin/libssl-3-x64.dll" />
+    <File Path="external/postgresql/16/windows-x64/bin/libcrypto-3-x64.dll" />
+    <File Path="external/postgresql/16/windows-x64/bin/libintl-9.dll" />
+    <File Path="external/postgresql/16/windows-x64/bin/libiconv-2.dll" />
+    <File Path="external/postgresql/16/windows-x64/bin/libwinpthread-1.dll" />
+    <File Path="external/postgresql/16/windows-x64/licenses/server_license.txt" />
+    <File Path="external/postgresql/16/windows-x64/licenses/commandlinetools_3rd_party_licenses.txt" />
+  </Folder>
   <Folder Name="/Resources/Configuration/">
     <File Path="config/examples/database.local.conf.example" />
   </Folder>

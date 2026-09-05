@@ -40,3 +40,6 @@ LICENSE text eol=lf
 *.pdf binary
 *.docx binary
 *.xlsx binary
+
+# Preserve vendor-supplied legal notices byte-for-byte.
+external/postgresql/**/licenses/*.txt -text -diff

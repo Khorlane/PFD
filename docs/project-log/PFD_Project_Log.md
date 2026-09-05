@@ -111,3 +111,55 @@ Expected result: only the standard `public` schema and a user-table count of zer
 - Running `database/changes/0001-0010-core`.
 - Creating PFD schemas or tables.
 - Loading public sample or private opening data.
+
+## 2026-09-05 16:57:27 -04:00 — First C++ PostgreSQL connectivity slice
+
+### Completed
+
+- Added the approved PostgreSQL 16.14 Windows x64 client headers, import library, runtime DLLs, and vendor notices under `external/postgresql/16/windows-x64`.
+- Set the shared PostgreSQL property sheet to client major version 16.
+- Added automatic copying of the approved `libpq` runtime DLL set beside executable targets that import the property sheet.
+- Added `pfd::database::Connection`, a small movable, non-copyable RAII owner for `PGconn`.
+- Kept direct `libpq` calls inside `PfdDatabase`.
+- Added a connection health operation that executes `SELECT 1` and preserves PostgreSQL failure details without exposing the connection string.
+- Added a Windows implementation in `PfdPlatform` that reads `%LOCALAPPDATA%\PFD\config\database.local.conf` as UTF-8 and returns a standard C++ string.
+- Replaced the original component-only test executable behavior with one small live PostgreSQL connectivity smoke check.
+- Recorded the lightweight verification policy in `SESSION.md`, section 23.
+- Did not create or change any PostgreSQL schemas or tables.
+
+### Implementation locations
+
+- PostgreSQL build and deployment settings: `build/visual-studio/Pfd.PostgreSQL.props`.
+- Database connection interface and implementation: `projects/PfdDatabase/include/pfd/database/Connection.hpp` and `projects/PfdDatabase/src/Connection.cpp`.
+- Local configuration boundary: `projects/PfdPlatform/include/pfd/platform/LocalConfiguration.hpp` and `projects/PfdPlatform/src/windows/LocalConfiguration.cpp`.
+- Connectivity smoke check: `projects/PfdTests/src/main.cpp`.
+- Approved client inventory and provenance: `external/postgresql/16/windows-x64/README.md`.
+
+### Verification performed
+
+Only the intentionally narrow verification was run:
+
+```powershell
+& '<Visual Studio MSBuild path>\MSBuild.exe' Pfd.slnx /t:Build /p:Configuration=Debug /p:Platform=x64 /m /nologo /v:minimal
+& 'out\build\Debug\x64\PfdTests.exe'
+```
+
+Results:
+
+- Debug/x64 solution build: passed.
+- Live connection to `pfd_dev` as `pfd_app`: passed.
+- `SELECT 1` health query: passed.
+- Six required non-system runtime DLLs were copied beside `PfdTests.exe`.
+- Release build and broader tests were intentionally not run.
+
+### Issue encountered
+
+The first compile identified that `postgres_ext.h` includes `pg_config_ext.h`. The missing vendor header was added to the approved client bundle, after which the focused build passed.
+
+### Deferred
+
+- General query-result abstraction.
+- Parameterized and prepared statement execution.
+- Transaction RAII.
+- Database schema and table creation.
+- Desktop user-interface integration.
