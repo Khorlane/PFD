@@ -18,6 +18,9 @@
     <File Path="build/visual-studio/Pfd.Common.props" /><File Path="build/visual-studio/Pfd.Portable.props" />
     <File Path="build/visual-studio/Pfd.PostgreSQL.props" /><File Path="build/visual-studio/Pfd.Windows.props" />
   </Folder>
+  <Folder Name="/Resources/Configuration/">
+    <File Path="config/examples/database.local.conf.example" />
+  </Folder>
   <Folder Name="/Resources/Database/" />
   <Folder Name="/Resources/Database/Bootstrap/">
     <File Path="database/bootstrap/00_create_cluster_roles.sql" /><File Path="database/bootstrap/01_create_pfd_database.sql" />
@@ -70,6 +73,9 @@
     <File Path="docs/enterprise/PFD_Persistent_Data_Architecture_and_Database_Standards_Specification.md" />
     <File Path="docs/enterprise/PFD_PostgreSQL_Database_Build_and_Change-Control_Plan.md" />
     <File Path="docs/enterprise/PFD_Relational_Schema_and_Table_Definition_Specification.md" />
+  </Folder>
+  <Folder Name="/Resources/Documentation/Project Log/">
+    <File Path="docs/project-log/PFD_Project_Log.md" />
   </Folder>
   <Folder Name="/Resources/Documentation/Domains/">
     <File Path="docs/domains/party-customer/PFD_Party_and_Customer_Domain_Specification.md" /><File Path="docs/domains/party-customer/PFD_Party_and_Customer_PostgreSQL_Build_Specification.md" />

@@ -22,7 +22,7 @@ SELECT format('REVOKE CREATE ON DATABASE %I FROM PUBLIC', :'pfd_database_name')\
 SELECT format('REVOKE ALL ON DATABASE %I FROM PUBLIC', :'pfd_database_name')\gexec
 SELECT format('GRANT CONNECT ON DATABASE %I TO pfd_change_executor', :'pfd_database_name')\gexec
 SELECT format('GRANT CONNECT ON DATABASE %I TO pfd_application', :'pfd_database_name')\gexec
+SELECT format('GRANT CONNECT ON DATABASE %I TO pfd_app', :'pfd_database_name')\gexec
 SELECT format('GRANT CONNECT ON DATABASE %I TO pfd_reporting', :'pfd_database_name')\gexec
 SELECT format('GRANT CONNECT ON DATABASE %I TO pfd_support_readonly', :'pfd_database_name')\gexec
 SELECT format('GRANT CONNECT ON DATABASE %I TO pfd_backup_operator', :'pfd_database_name')\gexec
-

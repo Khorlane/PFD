@@ -27,6 +27,7 @@ venv/
 # Private configuration and opening data
 config/local/
 config/private/
+*.local.conf
 opening-data/local/
 opening-data/private/
 .env

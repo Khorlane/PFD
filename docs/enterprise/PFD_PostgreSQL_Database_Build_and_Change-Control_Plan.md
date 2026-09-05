@@ -448,7 +448,8 @@ Tables, permanent reference codes, and business-data corrections are never handl
 |---|---:|---|
 | `pfd_database_owner` | No | Owns schemas and database objects |
 | `pfd_change_executor` | Controlled | Applies approved database changes |
-| `pfd_application` | Controlled | Executes approved operational application functions |
+| `pfd_application` | No | Holds approved operational application privileges |
+| `pfd_app` | Controlled | Credential-bearing login; member of `pfd_application` |
 | `pfd_reporting` | Controlled | Reads approved reporting views |
 | `pfd_support_readonly` | Controlled | Diagnostic read access under authorization |
 | `pfd_backup_operator` | Controlled | Performs approved backup and restore operations |

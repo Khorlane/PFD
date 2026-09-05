@@ -34,6 +34,8 @@ psql --set=pfd_database_name=pfd_dev -f bootstrap/01_create_pfd_database.sql pos
 
 Do not put passwords on the command line. Use an approved PostgreSQL password file, operating-system authentication, certificate, or secret provider.
 
+`pfd_application` is the non-login application privilege role. `pfd_app` is the local credential-bearing login and inherits the privileges granted to `pfd_application`.
+
 ## Build runner
 
 From the repository root:

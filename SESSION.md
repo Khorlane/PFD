@@ -441,3 +441,14 @@ The existing Python database-build runner may remain for schema builds, validati
 - Credentials, generated reports, exports, logs, backups, and database dumps containing private data remain outside the public repository.
 - The approved decision record is `docs/decisions/PFD_Public_Sample_and_Private_Configuration_Decision.md`.
 - This was a design-only correction. Executable SQL, CSV, manifests, Python tools, Git configuration, and C++ artifacts were not aligned or created as part of this correction and remain future implementation work.
+
+## 22. Local PostgreSQL development bootstrap
+
+- PostgreSQL 16 is used for local development at `127.0.0.1:5432` with UTF-8 encoding.
+- The local development database is `pfd_dev`.
+- `pfd_application` is a `NOLOGIN` privilege role.
+- `pfd_app` is the credential-bearing application login and inherits `pfd_application`.
+- Local connections use `sslmode=prefer`.
+- Private connection configuration belongs under `%LOCALAPPDATA%\PFD\config` and remains outside source control.
+- PFD documentation and runtime configuration use PFD-specific locations and remain independent of unrelated product or organization directories.
+- Creating the local database and roles does not authorize creation of PFD schemas, tables, reference data, or opening data.

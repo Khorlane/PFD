@@ -1,0 +1,113 @@
+# PFD Project Log
+
+This append-only log records completed project work in enough operational detail to repeat or audit it. Design requirements remain authoritative in `SESSION.md` and the referenced specifications; this log does not duplicate them.
+
+Never record passwords, private company data, personal filesystem paths, or other secrets here. Use environment-variable paths and placeholders for machine-local details.
+
+## 2026-09-05 15:45:44 -04:00 — Local PostgreSQL development bootstrap
+
+### Completed
+
+- Confirmed PostgreSQL 16 was accepting connections at `127.0.0.1:5432`.
+- Created the UTF-8 local development database `pfd_dev`, owned by `pfd_database_owner`.
+- Created or validated the bootstrap roles defined by `database/bootstrap/00_create_cluster_roles.sql`.
+- Changed `pfd_application` to a `NOLOGIN` privilege role.
+- Added `pfd_app` as the credential-bearing application login and granted it membership in `pfd_application`.
+- Generated a strong local password for `pfd_app` without printing or committing it.
+- Stored the private libpq connection string at `%LOCALAPPDATA%\PFD\config\database.local.conf` and restricted the file to the current Windows account.
+- Added the public, secret-free example at `config/examples/database.local.conf.example`.
+- Corrected bootstrap verification of the PostgreSQL `PUBLIC` pseudo-role by inspecting the database ACL rather than treating `PUBLIC` as a login role.
+- Updated bootstrap manifest checksums and the Visual Studio solution Resources listing.
+- Did not run the numbered database changes. No PFD schemas, tables, reference data, or opening data were created.
+
+### Repeat procedure
+
+Prerequisites:
+
+- PostgreSQL 16 server running at `127.0.0.1:5432`.
+- `psql.exe` from PostgreSQL 16.
+- An authorized PostgreSQL administrator credential supplied through a password file, operating-system authentication, or another approved secret mechanism. Do not put its password in these commands.
+- Run commands from the repository root.
+
+Set a neutral local variable for the PostgreSQL client location:
+
+```powershell
+$pfdPgBin = '<path-to-postgresql-16-bin>'
+$pfdPsql = Join-Path $pfdPgBin 'psql.exe'
+```
+
+Create or validate the cluster roles, then create the empty database:
+
+```powershell
+& $pfdPsql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -p 5432 -U postgres -d postgres -f database/bootstrap/00_create_cluster_roles.sql
+& $pfdPsql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -p 5432 -U postgres -d postgres --set=pfd_database_name=pfd_dev -f database/bootstrap/01_create_pfd_database.sql
+```
+
+Generate and assign the application password without placing it on the command line:
+
+```powershell
+$pfdPasswordBytes = [Security.Cryptography.RandomNumberGenerator]::GetBytes(36)
+$pfdPassword = [Convert]::ToBase64String($pfdPasswordBytes).TrimEnd('=').Replace('+', '-').Replace('/', '_')
+"ALTER ROLE pfd_app PASSWORD '$pfdPassword';" | & $pfdPsql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -p 5432 -U postgres -d postgres
+```
+
+Create the private connection file and restrict it to the current Windows account:
+
+```powershell
+$pfdConfigDirectory = Join-Path $env:LOCALAPPDATA 'PFD\config'
+$pfdConfigFile = Join-Path $pfdConfigDirectory 'database.local.conf'
+[IO.Directory]::CreateDirectory($pfdConfigDirectory) | Out-Null
+$pfdConnection = "host=127.0.0.1 port=5432 dbname=pfd_dev user=pfd_app password=$pfdPassword sslmode=prefer"
+[IO.File]::WriteAllText($pfdConfigFile, $pfdConnection + [Environment]::NewLine, [Text.UTF8Encoding]::new($false))
+$pfdWindowsAccount = [Security.Principal.WindowsIdentity]::GetCurrent().Name
+& icacls.exe $pfdConfigFile /inheritance:r /grant:r "${pfdWindowsAccount}:(F)"
+$pfdPassword = $null
+```
+
+Connect as an administrator to the new database and run the bootstrap verifier:
+
+```powershell
+& $pfdPsql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -p 5432 -U postgres -d pfd_dev -f database/bootstrap/02_verify_bootstrap.sql
+```
+
+Confirm that the database is still empty of PFD objects:
+
+```sql
+SELECT nspname
+FROM pg_namespace
+WHERE nspname <> 'information_schema'
+  AND nspname NOT LIKE 'pg_%'
+ORDER BY nspname;
+
+SELECT count(*) AS user_table_count
+FROM pg_tables
+WHERE schemaname <> 'information_schema'
+  AND schemaname NOT LIKE 'pg_%';
+```
+
+Expected result: only the standard `public` schema and a user-table count of zero.
+
+### Verification results
+
+- Bootstrap verifier: passed.
+- `pfd_app`: `LOGIN`, `INHERIT`, member of `pfd_application`.
+- `pfd_application`: `NOLOGIN`.
+- Application connection: succeeded as `pfd_app` to `pfd_dev`.
+- Server encoding: `UTF8`.
+- Non-system schemas: only `public`.
+- User tables: zero.
+- Bootstrap manifest checksums: valid.
+- `Pfd.slnx`: valid XML.
+
+### Cross-references
+
+- `SESSION.md`, section 22, “Local PostgreSQL development bootstrap.”
+- `database/README.md`.
+- `docs/enterprise/PFD_Database_Repository_and_Core_Build_Specification.md`.
+- `docs/enterprise/PFD_PostgreSQL_Database_Build_and_Change-Control_Plan.md`.
+
+### Deferred
+
+- Running `database/changes/0001-0010-core`.
+- Creating PFD schemas or tables.
+- Loading public sample or private opening data.

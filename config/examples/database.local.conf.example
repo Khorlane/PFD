@@ -1,0 +1,1 @@
+host=127.0.0.1 port=5432 dbname=pfd_dev user=pfd_app password=<password> sslmode=prefer

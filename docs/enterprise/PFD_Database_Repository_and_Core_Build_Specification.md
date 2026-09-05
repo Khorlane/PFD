@@ -254,7 +254,8 @@ Creates or validates:
 
 - `pfd_database_owner` as `NOLOGIN`
 - `pfd_change_executor` as a controlled login or externally authenticated role
-- `pfd_application` as a controlled login or externally authenticated role
+- `pfd_application` as the `NOLOGIN` application privilege role
+- `pfd_app` as the credential-bearing application login and a member of `pfd_application`
 - `pfd_reporting` as a controlled login or externally authenticated role
 - `pfd_support_readonly` as a controlled login or externally authenticated role
 - `pfd_backup_operator` according to the selected backup method
@@ -1014,6 +1015,7 @@ Comments explain meaning and control. They do not duplicate obvious SQL syntax.
 | `pfd_database_owner` | Yes | Yes | Yes | Yes |
 | `pfd_change_executor` | Yes | During approved build | During approved build | Yes |
 | `pfd_application` | Yes | No | Only explicitly granted application operations | Required operational tables |
+| `pfd_app` | Through `pfd_application` | No | Through `pfd_application` | Through `pfd_application` |
 | `pfd_reporting` | Yes | No | No | Approved views/tables only |
 | `pfd_support_readonly` | Yes | No | No | Approved diagnostic objects |
 | `PUBLIC` | No by default | No | No | No |

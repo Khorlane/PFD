@@ -14,7 +14,11 @@ BEGIN
     END IF;
 
     IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'pfd_application') THEN
-        CREATE ROLE pfd_application LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE NOREPLICATION;
+        CREATE ROLE pfd_application NOLOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE NOREPLICATION;
+    END IF;
+
+    IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'pfd_app') THEN
+        CREATE ROLE pfd_app LOGIN INHERIT NOSUPERUSER NOCREATEDB NOCREATEROLE NOREPLICATION;
     END IF;
 
     IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'pfd_reporting') THEN
@@ -31,7 +35,7 @@ BEGIN
 
     IF EXISTS (
         SELECT 1 FROM pg_roles
-        WHERE rolname IN ('pfd_database_owner', 'pfd_change_executor', 'pfd_application',
+        WHERE rolname IN ('pfd_database_owner', 'pfd_change_executor', 'pfd_application', 'pfd_app',
                           'pfd_reporting', 'pfd_support_readonly', 'pfd_backup_operator')
           AND (rolsuper OR rolcreatedb OR rolcreaterole OR rolreplication)
     ) THEN
@@ -42,13 +46,17 @@ BEGIN
         RAISE EXCEPTION 'pfd_database_owner must remain NOLOGIN';
     END IF;
 
+    IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'pfd_application' AND rolcanlogin) THEN
+        RAISE EXCEPTION 'pfd_application must remain a NOLOGIN privilege role';
+    END IF;
+
     IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'pfd_change_executor' AND rolinherit) THEN
         RAISE EXCEPTION 'pfd_change_executor must remain NOINHERIT';
     END IF;
 
     IF EXISTS (
         SELECT 1 FROM pg_roles
-         WHERE rolname IN ('pfd_change_executor', 'pfd_application', 'pfd_reporting',
+         WHERE rolname IN ('pfd_change_executor', 'pfd_app', 'pfd_reporting',
                            'pfd_support_readonly', 'pfd_backup_operator')
            AND NOT rolcanlogin
     ) THEN
@@ -58,3 +66,4 @@ END
 $pfd$;
 
 GRANT pfd_database_owner TO pfd_change_executor;
+GRANT pfd_application TO pfd_app;

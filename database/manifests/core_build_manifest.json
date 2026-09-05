@@ -6,9 +6,9 @@
   "minimum_postgresql_major": 15,
   "expected_final_change": "0010",
   "bootstrap": [
-    {"file": "bootstrap/00_create_cluster_roles.sql", "sha256": "4fe361575c9e9629b4442a07b8b0520a3743a39a4261ba0c8b0bf2f1c9b7151c"},
-    {"file": "bootstrap/01_create_pfd_database.sql", "sha256": "a17ab8dc1063e5b3d9642aa9ca862154b5c85d0b566dca4eda0652622b538884"},
-    {"file": "bootstrap/02_verify_bootstrap.sql", "sha256": "4c8d294b66ae1c6a03d84f837ace8a03be7a1ed37223522990d0438b4cf91bd3"}
+    {"file": "bootstrap/00_create_cluster_roles.sql", "sha256": "97001c2f404c21ad82bba2ed49551c68a8e9002bbdcc88aa5fc3e517ad2bb11b"},
+    {"file": "bootstrap/01_create_pfd_database.sql", "sha256": "0b9d86b8a381b253853940652a8cc0c063469c609c211406ee28740e312ed500"},
+    {"file": "bootstrap/02_verify_bootstrap.sql", "sha256": "a1c6c8c7d47c8dec1807f45c61040a30f6167e4e8e8489e16bedd38e9da413b2"}
   ],
   "changes": [
     {"number": "0001", "name": "Create Core Change History", "file": "changes/0001-0010-core/0001_create_core_change_history.sql", "sha256": "8079b364edb28f47d22974ed95a01bf546613f60199e6caeb97eb92389ab6c56"},
