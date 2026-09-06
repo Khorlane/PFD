@@ -269,3 +269,10 @@ No SQL was executed against `pfd_dev` as part of the formatting retrofit. No sch
 - Updated `Pfd.slnx`, `SESSION.md`, and project-log cross-references to use the new paths.
 - Confirmed that all 36 Markdown files under `docs` are represented in `Pfd.slnx`, with no missing or stale entries.
 - No application source code, SQL, database objects, or build behavior changed.
+
+## 2026-09-06 15:25:36 -04:00 — Standardized domain database-design filenames
+
+- Renamed all 11 domain `*_PostgreSQL_Build_Specification.md` files to the shorter `*_DbDesignSpec.md` convention.
+- Updated `Pfd.slnx` and the document inventory in `SESSION.md` to use the new filenames.
+- This change standardizes filenames only; substantive separation of logical design from PostgreSQL physical implementation remains future documentation work.
+- No application source code, SQL, database objects, or build behavior changed.

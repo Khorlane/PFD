@@ -93,17 +93,17 @@
     <File Path="docs/Project Log/Project_Log.md" />
   </Folder>
   <Folder Name="/Resources/Documentation/Domains/">
-    <File Path="docs/Domains/Party_and_Customer_Domain_Specification.md" /><File Path="docs/Domains/Party_and_Customer_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/Domains/Product_Domain_Specification.md" /><File Path="docs/Domains/Product_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/Domains/Supplier_and_Purchasing_Domain_Specification.md" /><File Path="docs/Domains/Supplier_and_Purchasing_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/Domains/Inventory_Domain_Specification.md" /><File Path="docs/Domains/Inventory_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/Domains/Warehouse_Operations_Domain_Specification.md" /><File Path="docs/Domains/Warehouse_Operations_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/Domains/Sales_and_Order_Management_Domain_Specification.md" /><File Path="docs/Domains/Sales_and_Order_Management_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/Domains/Transportation_and_Delivery_Domain_Specification.md" /><File Path="docs/Domains/Transportation_and_Delivery_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/Domains/Finance_and_Accounting_Domain_Specification.md" /><File Path="docs/Domains/Finance_and_Accounting_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/Domains/Workforce_and_Payroll_Domain_Specification.md" /><File Path="docs/Domains/Workforce_and_Payroll_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/Domains/Quality_Food_Safety_and_Recall_Domain_Specification.md" /><File Path="docs/Domains/Quality_Food_Safety_and_Recall_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/Domains/Management_Reporting_and_Audit_Domain_Specification.md" /><File Path="docs/Domains/Management_Reporting_and_Audit_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/Domains/Party_and_Customer_Domain_Specification.md" /><File Path="docs/Domains/Party_and_Customer_DbDesignSpec.md" />
+    <File Path="docs/Domains/Product_Domain_Specification.md" /><File Path="docs/Domains/Product_DbDesignSpec.md" />
+    <File Path="docs/Domains/Supplier_and_Purchasing_Domain_Specification.md" /><File Path="docs/Domains/Supplier_and_Purchasing_DbDesignSpec.md" />
+    <File Path="docs/Domains/Inventory_Domain_Specification.md" /><File Path="docs/Domains/Inventory_DbDesignSpec.md" />
+    <File Path="docs/Domains/Warehouse_Operations_Domain_Specification.md" /><File Path="docs/Domains/Warehouse_Operations_DbDesignSpec.md" />
+    <File Path="docs/Domains/Sales_and_Order_Management_Domain_Specification.md" /><File Path="docs/Domains/Sales_and_Order_Management_DbDesignSpec.md" />
+    <File Path="docs/Domains/Transportation_and_Delivery_Domain_Specification.md" /><File Path="docs/Domains/Transportation_and_Delivery_DbDesignSpec.md" />
+    <File Path="docs/Domains/Finance_and_Accounting_Domain_Specification.md" /><File Path="docs/Domains/Finance_and_Accounting_DbDesignSpec.md" />
+    <File Path="docs/Domains/Workforce_and_Payroll_Domain_Specification.md" /><File Path="docs/Domains/Workforce_and_Payroll_DbDesignSpec.md" />
+    <File Path="docs/Domains/Quality_Food_Safety_and_Recall_Domain_Specification.md" /><File Path="docs/Domains/Quality_Food_Safety_and_Recall_DbDesignSpec.md" />
+    <File Path="docs/Domains/Management_Reporting_and_Audit_Domain_Specification.md" /><File Path="docs/Domains/Management_Reporting_and_Audit_DbDesignSpec.md" />
   </Folder>
   <Folder Name="/Resources/Documentation/" />
   <Folder Name="/Resources/Documentation/Cross-Cutting/">

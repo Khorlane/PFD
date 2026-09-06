@@ -149,27 +149,27 @@ Opening inventory includes lots/date attributes, locations, status, quantities, 
 ### Functional domains
 
 9. `Party_and_Customer_Domain_Specification.md`
-10. `Party_and_Customer_PostgreSQL_Build_Specification.md`
+10. `Party_and_Customer_DbDesignSpec.md`
 11. `Product_Domain_Specification.md`
-12. `Product_PostgreSQL_Build_Specification.md`
+12. `Product_DbDesignSpec.md`
 13. `Supplier_and_Purchasing_Domain_Specification.md`
-14. `Supplier_and_Purchasing_PostgreSQL_Build_Specification.md`
+14. `Supplier_and_Purchasing_DbDesignSpec.md`
 15. `Inventory_Domain_Specification.md`
-16. `Inventory_PostgreSQL_Build_Specification.md`
+16. `Inventory_DbDesignSpec.md`
 17. `Warehouse_Operations_Domain_Specification.md`
-18. `Warehouse_Operations_PostgreSQL_Build_Specification.md`
+18. `Warehouse_Operations_DbDesignSpec.md`
 19. `Sales_and_Order_Management_Domain_Specification.md`
-20. `Sales_and_Order_Management_PostgreSQL_Build_Specification.md`
+20. `Sales_and_Order_Management_DbDesignSpec.md`
 21. `Transportation_and_Delivery_Domain_Specification.md`
-22. `Transportation_and_Delivery_PostgreSQL_Build_Specification.md`
+22. `Transportation_and_Delivery_DbDesignSpec.md`
 23. `Finance_and_Accounting_Domain_Specification.md`
-24. `Finance_and_Accounting_PostgreSQL_Build_Specification.md`
+24. `Finance_and_Accounting_DbDesignSpec.md`
 25. `Workforce_and_Payroll_Domain_Specification.md`
-26. `Workforce_and_Payroll_PostgreSQL_Build_Specification.md`
+26. `Workforce_and_Payroll_DbDesignSpec.md`
 27. `Quality_Food_Safety_and_Recall_Domain_Specification.md`
-28. `Quality_Food_Safety_and_Recall_PostgreSQL_Build_Specification.md`
+28. `Quality_Food_Safety_and_Recall_DbDesignSpec.md`
 29. `Management_Reporting_and_Audit_Domain_Specification.md`
-30. `Management_Reporting_and_Audit_PostgreSQL_Build_Specification.md`
+30. `Management_Reporting_and_Audit_DbDesignSpec.md`
 
 ### Cross-cutting completion documents
 
