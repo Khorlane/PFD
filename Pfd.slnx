@@ -80,37 +80,37 @@
     <File Path="database/releases/0001-0010-core/README.md" /><File Path="database/releases/0001-0010-core/RELEASE_NOTES.md" />
   </Folder>
   <Folder Name="/Resources/Documentation/Enterprise/">
-    <File Path="docs/enterprise/PFD_Business_Model_and_Operating_Policies.md" />
-    <File Path="docs/enterprise/PFD_Business_Process_and_Transaction_Lifecycle_Specification.md" />
-    <File Path="docs/enterprise/PFD_Business_to_IT_Capability_Specification.md" />
-    <File Path="docs/enterprise/PFD_Database_Repository_and_Core_Build_Specification.md" />
-    <File Path="docs/enterprise/PFD_Information_Model_and_Record_Ownership_Specification.md" />
-    <File Path="docs/enterprise/PFD_Persistent_Data_Architecture_and_Database_Standards_Specification.md" />
-    <File Path="docs/enterprise/PFD_PostgreSQL_Database_Build_and_Change-Control_Plan.md" />
-    <File Path="docs/enterprise/PFD_Relational_Schema_and_Table_Definition_Specification.md" />
+    <File Path="docs/enterprise/Business_Model_and_Operating_Policies.md" />
+    <File Path="docs/enterprise/Business_Process_and_Transaction_Lifecycle_Specification.md" />
+    <File Path="docs/enterprise/Business_to_IT_Capability_Specification.md" />
+    <File Path="docs/enterprise/Database_Repository_and_Core_Build_Specification.md" />
+    <File Path="docs/enterprise/Information_Model_and_Record_Ownership_Specification.md" />
+    <File Path="docs/enterprise/Persistent_Data_Architecture_and_Database_Standards_Specification.md" />
+    <File Path="docs/enterprise/PostgreSQL_Database_Build_and_Change-Control_Plan.md" />
+    <File Path="docs/enterprise/Relational_Schema_and_Table_Definition_Specification.md" />
   </Folder>
   <Folder Name="/Resources/Documentation/Project Log/">
-    <File Path="docs/project-log/PFD_Project_Log.md" />
+    <File Path="docs/project-log/Project_Log.md" />
   </Folder>
   <Folder Name="/Resources/Documentation/Domains/">
-    <File Path="docs/domains/party-customer/PFD_Party_and_Customer_Domain_Specification.md" /><File Path="docs/domains/party-customer/PFD_Party_and_Customer_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/domains/product/PFD_Product_Domain_Specification.md" /><File Path="docs/domains/product/PFD_Product_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/domains/supplier-purchasing/PFD_Supplier_and_Purchasing_Domain_Specification.md" /><File Path="docs/domains/supplier-purchasing/PFD_Supplier_and_Purchasing_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/domains/inventory/PFD_Inventory_Domain_Specification.md" /><File Path="docs/domains/inventory/PFD_Inventory_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/domains/warehouse/PFD_Warehouse_Operations_Domain_Specification.md" /><File Path="docs/domains/warehouse/PFD_Warehouse_Operations_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/domains/sales-order-management/PFD_Sales_and_Order_Management_Domain_Specification.md" /><File Path="docs/domains/sales-order-management/PFD_Sales_and_Order_Management_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/domains/transportation-delivery/PFD_Transportation_and_Delivery_Domain_Specification.md" /><File Path="docs/domains/transportation-delivery/PFD_Transportation_and_Delivery_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/domains/finance-accounting/PFD_Finance_and_Accounting_Domain_Specification.md" /><File Path="docs/domains/finance-accounting/PFD_Finance_and_Accounting_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/domains/workforce-payroll/PFD_Workforce_and_Payroll_Domain_Specification.md" /><File Path="docs/domains/workforce-payroll/PFD_Workforce_and_Payroll_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/domains/quality-food-safety-recall/PFD_Quality_Food_Safety_and_Recall_Domain_Specification.md" /><File Path="docs/domains/quality-food-safety-recall/PFD_Quality_Food_Safety_and_Recall_PostgreSQL_Build_Specification.md" />
-    <File Path="docs/domains/management-reporting-audit/PFD_Management_Reporting_and_Audit_Domain_Specification.md" /><File Path="docs/domains/management-reporting-audit/PFD_Management_Reporting_and_Audit_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/party-customer/Party_and_Customer_Domain_Specification.md" /><File Path="docs/domains/party-customer/Party_and_Customer_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/product/Product_Domain_Specification.md" /><File Path="docs/domains/product/Product_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/supplier-purchasing/Supplier_and_Purchasing_Domain_Specification.md" /><File Path="docs/domains/supplier-purchasing/Supplier_and_Purchasing_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/inventory/Inventory_Domain_Specification.md" /><File Path="docs/domains/inventory/Inventory_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/warehouse/Warehouse_Operations_Domain_Specification.md" /><File Path="docs/domains/warehouse/Warehouse_Operations_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/sales-order-management/Sales_and_Order_Management_Domain_Specification.md" /><File Path="docs/domains/sales-order-management/Sales_and_Order_Management_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/transportation-delivery/Transportation_and_Delivery_Domain_Specification.md" /><File Path="docs/domains/transportation-delivery/Transportation_and_Delivery_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/finance-accounting/Finance_and_Accounting_Domain_Specification.md" /><File Path="docs/domains/finance-accounting/Finance_and_Accounting_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/workforce-payroll/Workforce_and_Payroll_Domain_Specification.md" /><File Path="docs/domains/workforce-payroll/Workforce_and_Payroll_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/quality-food-safety-recall/Quality_Food_Safety_and_Recall_Domain_Specification.md" /><File Path="docs/domains/quality-food-safety-recall/Quality_Food_Safety_and_Recall_PostgreSQL_Build_Specification.md" />
+    <File Path="docs/domains/management-reporting-audit/Management_Reporting_and_Audit_Domain_Specification.md" /><File Path="docs/domains/management-reporting-audit/Management_Reporting_and_Audit_PostgreSQL_Build_Specification.md" />
   </Folder>
   <Folder Name="/Resources/Documentation/" />
   <Folder Name="/Resources/Documentation/Cross-Cutting/">
-    <File Path="docs/decisions/PFD_Public_Sample_and_Private_Configuration_Decision.md" />
-    <File Path="docs/implementation/PFD_Integrated_Design_Validation_and_Implementation_Readiness_Specification.md" />
-    <File Path="docs/opening-baseline/PFD_Opening_Business_Data_and_Grand_Opening_Baseline_Specification.md" />
-    <File Path="docs/simulation/PFD_Simulation_Execution_and_Scenario_Control_Specification.md" />
+    <File Path="docs/decisions/Public_Sample_and_Private_Configuration_Decision.md" />
+    <File Path="docs/implementation/Integrated_Design_Validation_and_Implementation_Readiness_Specification.md" />
+    <File Path="docs/opening-baseline/Opening_Business_Data_and_Grand_Opening_Baseline_Specification.md" />
+    <File Path="docs/simulation/Simulation_Execution_and_Scenario_Control_Specification.md" />
     <File Path="docs/source-material/Design.md" />
   </Folder>
   <Folder Name="/Resources/Opening Data/"><File Path="opening-data/templates/company.csv" /></Folder>

@@ -1,6 +1,6 @@
 # Codex Session Handoff — \<business name>
 
-**Project:** \<business name> (PFD)  
+**Project:** \<business name> (\<company abbr>)  
 **Handoff date:** September 5, 2026  
 **Current phase:** Design complete; executable implementation underway  
 **User:** \<owner 1>  
@@ -8,7 +8,7 @@
 
 ## 1. Resume instruction
 
-Continue the PFD project from the approved design baseline. Do not restart discovery or redesign settled business rules. The design-document phase is complete.
+Continue the project from the approved design baseline. Do not restart discovery or redesign settled business rules. The design-document phase is complete.
 
 The executable PostgreSQL Core Build already exists through change `0010`. Verify and preserve that package, then continue implementation with Party and Customer changes `0011`–`0022`. Do not recreate the Core Build or jump directly into application UI work.
 
@@ -54,7 +54,7 @@ Ask \<owner 1> only when a genuinely material or blocking business choice cannot
 - Composite natural keys are acceptable and required when business identity is contextual.
 - Enforce referential integrity, candidate keys, checks, and controlled lifecycle transitions in the database.
 - Do not delete history that must be retained. Inactivate master records and correct completed transactions through linked reversals or adjustments.
-- Store instants as timezone-aware timestamps; PFD's operating timezone is `America/New_York`.
+- Store instants as timezone-aware timestamps; operating timezone is `America/New_York`.
 - Use FEFO or approved shelf-life rotation for physical product movement and FIFO for financial inventory valuation.
 - Keep operational source records normalized. Reporting structures must not become independent shadow ledgers.
 - Applied database changes are ordered, checksummed, immutable, and promoted unchanged between environments.
@@ -74,7 +74,7 @@ Simulation must behave like the real business:
 
 ## 5. Business snapshot
 
-PFD is a regional broadline food-service distributor serving:
+The business is a regional broadline food-service distributor serving:
 
 - Restaurants.
 - Hospitals.
@@ -84,13 +84,13 @@ PFD is a regional broadline food-service distributor serving:
 
 Primary products include canned and dry goods, frozen goods, fresh produce, paper products, and other consumable food-service supplies.
 
-The service territory uses PFD as the hub with spokes toward:
+The service territory uses the business as the hub with spokes toward:
 
 - Statesville, North Carolina.
 - Monroe, North Carolina.
 - Rock Hill, South Carolina.
 - Gastonia, North Carolina.
-- Customers reasonably located along the direct routes between PFD and those endpoints.
+- Customers reasonably located along the direct routes between the business and those endpoints.
 
 ## 6. Ownership and responsibility
 
@@ -102,8 +102,8 @@ Delegated authority must have scope, effective dates, limits, and an audit trail
 
 ## 7. Important operating decisions
 
-- PFD owns its facility, with financing.
-- PFD owns its truck fleet, with financing.
+- The business owns its facility, with financing.
+- The business owns its truck fleet, with financing.
 - Inbound supplier deliveries require appointments; trucks may not arrive at will.
 - Split packs are supported but are undesirable and treated as exceptions.
 - The warehouse cannot weigh an item, price-label it, transmit the result to the computer room, and place that variable price on the departing invoice. Do not design operations around catch-weight pricing at shipment.
@@ -112,7 +112,7 @@ Delegated authority must have scope, effective dates, limits, and an audit trail
 - Multiple lots may occupy one picking slot when full pallets or operating conditions require it.
 - Picking procedure depletes the active lot before moving to the next, unless an authorized exception is recorded.
 - Product expected to expire before reasonable customer use should not be shipped merely because it has not yet reached its expiration date.
-- Exact outbound-lot tracking is required for regulated, contractual, or PFD risk-designated products.
+- Exact outbound-lot tracking is required for regulated, contractual, or risk-designated products.
 - Other products may use an exposure-window trace method when exact outbound-lot capture is not required.
 - Undisputed portions of supplier invoices are paid on time while disputes are resolved cooperatively.
 - Treasury maintains enough liquidity to pay obligations promptly and take economically sound discounts.
@@ -129,7 +129,7 @@ The approved design baseline assumes approximately:
 - A roughly 50,000-square-foot owned facility.
 - 45–50 employees.
 
-The opening baseline represents **12:00 PM America/New_York on the Sunday immediately preceding PFD's first Monday operating cycle**.
+The opening baseline represents **12:00 PM America/New_York on the Sunday immediately preceding the business' first Monday operating cycle**.
 
 Opening inventory includes lots/date attributes, locations, status, quantities, and FIFO valuation. Accounts receivable and payable normally begin at zero unless explicitly loaded. Opening assets, debt, equity, cash, and inventory must balance.
 
@@ -137,47 +137,47 @@ Opening inventory includes lots/date attributes, locations, status, quantities, 
 
 ### Enterprise foundation
 
-1. `PFD_Business_Model_and_Operating_Policies.md`
-2. `PFD_Business_to_IT_Capability_Specification.md`
-3. `PFD_Information_Model_and_Record_Ownership_Specification.md`
-4. `PFD_Business_Process_and_Transaction_Lifecycle_Specification.md`
-5. `PFD_Persistent_Data_Architecture_and_Database_Standards_Specification.md`
-6. `PFD_Relational_Schema_and_Table_Definition_Specification.md`
-7. `PFD_PostgreSQL_Database_Build_and_Change-Control_Plan.md`
-8. `PFD_Database_Repository_and_Core_Build_Specification.md`
+1. `Business_Model_and_Operating_Policies.md`
+2. `Business_to_IT_Capability_Specification.md`
+3. `Information_Model_and_Record_Ownership_Specification.md`
+4. `Business_Process_and_Transaction_Lifecycle_Specification.md`
+5. `Persistent_Data_Architecture_and_Database_Standards_Specification.md`
+6. `Relational_Schema_and_Table_Definition_Specification.md`
+7. `PostgreSQL_Database_Build_and_Change-Control_Plan.md`
+8. `Database_Repository_and_Core_Build_Specification.md`
 
 ### Functional domains
 
-9. `PFD_Party_and_Customer_Domain_Specification.md`
-10. `PFD_Party_and_Customer_PostgreSQL_Build_Specification.md`
-11. `PFD_Product_Domain_Specification.md`
-12. `PFD_Product_PostgreSQL_Build_Specification.md`
-13. `PFD_Supplier_and_Purchasing_Domain_Specification.md`
-14. `PFD_Supplier_and_Purchasing_PostgreSQL_Build_Specification.md`
-15. `PFD_Inventory_Domain_Specification.md`
-16. `PFD_Inventory_PostgreSQL_Build_Specification.md`
-17. `PFD_Warehouse_Operations_Domain_Specification.md`
-18. `PFD_Warehouse_Operations_PostgreSQL_Build_Specification.md`
-19. `PFD_Sales_and_Order_Management_Domain_Specification.md`
-20. `PFD_Sales_and_Order_Management_PostgreSQL_Build_Specification.md`
-21. `PFD_Transportation_and_Delivery_Domain_Specification.md`
-22. `PFD_Transportation_and_Delivery_PostgreSQL_Build_Specification.md`
-23. `PFD_Finance_and_Accounting_Domain_Specification.md`
-24. `PFD_Finance_and_Accounting_PostgreSQL_Build_Specification.md`
-25. `PFD_Workforce_and_Payroll_Domain_Specification.md`
-26. `PFD_Workforce_and_Payroll_PostgreSQL_Build_Specification.md`
-27. `PFD_Quality_Food_Safety_and_Recall_Domain_Specification.md`
-28. `PFD_Quality_Food_Safety_and_Recall_PostgreSQL_Build_Specification.md`
-29. `PFD_Management_Reporting_and_Audit_Domain_Specification.md`
-30. `PFD_Management_Reporting_and_Audit_PostgreSQL_Build_Specification.md`
+9. `Party_and_Customer_Domain_Specification.md`
+10. `Party_and_Customer_PostgreSQL_Build_Specification.md`
+11. `Product_Domain_Specification.md`
+12. `Product_PostgreSQL_Build_Specification.md`
+13. `Supplier_and_Purchasing_Domain_Specification.md`
+14. `Supplier_and_Purchasing_PostgreSQL_Build_Specification.md`
+15. `Inventory_Domain_Specification.md`
+16. `Inventory_PostgreSQL_Build_Specification.md`
+17. `Warehouse_Operations_Domain_Specification.md`
+18. `Warehouse_Operations_PostgreSQL_Build_Specification.md`
+19. `Sales_and_Order_Management_Domain_Specification.md`
+20. `Sales_and_Order_Management_PostgreSQL_Build_Specification.md`
+21. `Transportation_and_Delivery_Domain_Specification.md`
+22. `Transportation_and_Delivery_PostgreSQL_Build_Specification.md`
+23. `Finance_and_Accounting_Domain_Specification.md`
+24. `Finance_and_Accounting_PostgreSQL_Build_Specification.md`
+25. `Workforce_and_Payroll_Domain_Specification.md`
+26. `Workforce_and_Payroll_PostgreSQL_Build_Specification.md`
+27. `Quality_Food_Safety_and_Recall_Domain_Specification.md`
+28. `Quality_Food_Safety_and_Recall_PostgreSQL_Build_Specification.md`
+29. `Management_Reporting_and_Audit_Domain_Specification.md`
+30. `Management_Reporting_and_Audit_PostgreSQL_Build_Specification.md`
 
 ### Cross-cutting completion documents
 
-31. `PFD_Simulation_Execution_and_Scenario_Control_Specification.md`
-32. `PFD_Opening_Business_Data_and_Grand_Opening_Baseline_Specification.md`
-33. `PFD_Integrated_Design_Validation_and_Implementation_Readiness_Specification.md`
+31. `Simulation_Execution_and_Scenario_Control_Specification.md`
+32. `Opening_Business_Data_and_Grand_Opening_Baseline_Specification.md`
+33. `Integrated_Design_Validation_and_Implementation_Readiness_Specification.md`
 
-The uploaded `Design(5).md` was earlier source material. The named PFD specifications above are now the authoritative working baseline.
+The uploaded `Design(5).md` was earlier source material. The named specifications above are now the authoritative working baseline.
 
 ## 10. Document-precedence rule
 
@@ -246,7 +246,7 @@ Do not place passwords, connection strings, or production data in the package. U
 7. Build application services and integrations around the approved transaction lifecycles.
 8. Prove end-to-end operation, reconciliation, security, recovery, performance, and one-day/one-week simulation.
 
-The next concrete deliverable should be the **PFD Party and Customer Executable PostgreSQL Build Package**, integrated with the existing Core Build rather than created as an unrelated standalone database.
+The next concrete deliverable should be the **Party and Customer Executable PostgreSQL Build Package**, integrated with the existing Core Build rather than created as an unrelated standalone database.
 
 ## 14. Implementation acceptance principles
 
@@ -305,7 +305,7 @@ All production-required values need an owner, effective date, source, validation
 
 ## 18. Definition of project completion
 
-PFD is not complete when the design or database alone is finished. Completion requires:
+Completion requires:
 
 - Executable PostgreSQL changes through `0205`.
 - Approved applications, reports, integrations, and operating documents.
@@ -329,7 +329,7 @@ The next session should begin with the existing Core executable package and proc
 
 ## 20. Fixed application implementation baseline
 
-Treat the following implementation decisions as fixed unless \<owner 1> explicitly changes them. Apply them to all future PFD application architecture, project structures, source code, and implementation documents.
+Treat the following implementation decisions as fixed unless \<owner 1> explicitly changes them. Apply them to all future application architecture, project structures, source code, and implementation documents.
 
 ### Development environment
 
@@ -346,13 +346,13 @@ Treat the following implementation decisions as fixed unless \<owner 1> explicit
 
 ### Application model
 
-PFD is a private, single-user application. \<owner 1> is the only interactive user.
+The application is private and single-user.
 
 - Build a Windows desktop application.
 - Use MFC for the user interface.
 - Do not create a distributed workstation deployment model.
 - Do not create a Windows application service or API layer merely to isolate PostgreSQL.
-- The desktop application may connect directly to PostgreSQL through the PFD database-access library.
+- The desktop application may connect directly to PostgreSQL through the database-access library.
 - Do not create an installer or deployment package unless \<owner 1> requests one later.
 - Never hardcode database passwords or connection strings in source code.
 
@@ -368,7 +368,7 @@ PFD is a private, single-user application. \<owner 1> is the only interactive us
 - Do not use `libpqxx`.
 - Use explicit parameterized SQL, prepared statements, and controlled transactions.
 
-Create a small PFD-owned C++ RAII layer around `libpq` for:
+Create a small project-owned C++ RAII layer around `libpq` for:
 
 - Connections.
 - Query results.
@@ -414,7 +414,7 @@ Use these project boundaries:
 
 The existing Python database-build runner may remain for schema builds, validation, and administrative tooling. Python is not part of the interactive production application and is not required on \<owner 1>'s Windows workstation merely to run `PfdDesktop`.
 
-### Continuing PFD database rules
+### Continuing database rules
 
 - Use normalized relational design.
 - Use natural business primary keys.
@@ -439,7 +439,7 @@ The existing Python database-build runner may remain for schema builds, validati
 - The active owner roster contains one or more Owners, and effective Ownership Interests total exactly 100 percent.
 - Schema changes create `core.company` but do not supply a named Company row; the selected opening dataset supplies business identity.
 - Credentials, generated reports, exports, logs, backups, and database dumps containing private data remain outside the public repository.
-- The approved decision record is `docs/decisions/PFD_Public_Sample_and_Private_Configuration_Decision.md`.
+- The approved decision record is `docs/decisions/Public_Sample_and_Private_Configuration_Decision.md`.
 - This was a design-only correction. Executable SQL, CSV, manifests, Python tools, Git configuration, and C++ artifacts were not aligned or created as part of this correction and remain future implementation work.
 
 ## 22. Local PostgreSQL development bootstrap
@@ -450,12 +450,12 @@ The existing Python database-build runner may remain for schema builds, validati
 - `pfd_app` is the credential-bearing application login and inherits `pfd_application`.
 - Local connections use `sslmode=prefer`.
 - Private connection configuration belongs under `%LOCALAPPDATA%\PFD\config` and remains outside source control.
-- PFD documentation and runtime configuration use PFD-specific locations and remain independent of unrelated product or organization directories.
-- Creating the local database and roles does not authorize creation of PFD schemas, tables, reference data, or opening data.
+- Documentation and runtime configuration use specific locations and remain independent of unrelated product or organization directories.
+- Creating the local database and roles does not authorize creation of schemas, tables, reference data, or opening data.
 
 ## 23. Lightweight verification policy
 
-- PFD is an exploratory simulation project rather than a production application.
+- This is an exploratory simulation project rather than a production application.
 - Prioritize application implementation over extensive test infrastructure or coverage targets.
 - Add only small, high-value checks when a risky foundation or observed defect justifies them.
 - Avoid elaborate mocks, repetitive unit tests, and large fixture systems unless a concrete need develops.
@@ -466,8 +466,8 @@ The existing Python database-build runner may remain for schema builds, validati
 
 ## 24. Source indentation
 
-- PFD-owned source code uses spaces only; tabs are prohibited.
+- Project-owned source code uses spaces only; tabs are prohibited.
 - Indent each code level with 2 spaces.
 - `.editorconfig` defines the repository-wide whitespace defaults.
 - `.clang-format` defines C++ formatting with 2-space indentation and no tabs.
-- Third-party files under `external` remain vendor-controlled and are exempt from PFD formatting rules.
+- Third-party files under `external` remain vendor-controlled and are exempt from formatting rules.
