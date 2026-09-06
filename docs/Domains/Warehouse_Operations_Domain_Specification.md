@@ -1,4 +1,3 @@
-# \<business name>
 # Warehouse Operations Domain Specification
 
 **Version:** 1.0  

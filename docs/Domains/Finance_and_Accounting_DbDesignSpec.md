@@ -1,4 +1,3 @@
-# \<business name>
 # Finance and Accounting PostgreSQL Build Specification
 
 **Version:** 1.0  

@@ -1,9 +1,5 @@
-# \<business name>
+# Database Repository and Core Build Specification
 
-## Database Repository and Core Build Specification
-
-**Company abbreviation:** \<company abbr>
-**Database platform:** PostgreSQL  
 **Document date:** September 4, 2026  
 **Document status:** Authoritative detailed implementation specification  
 

@@ -1,4 +1,3 @@
-# \<business name>
 # Party and Customer PostgreSQL Build Specification
 
 **Document version:** 1.0  

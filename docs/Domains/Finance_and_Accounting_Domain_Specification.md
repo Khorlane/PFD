@@ -1,4 +1,3 @@
-# \<business name>
 # Finance and Accounting Domain Specification
 
 **Version:** 1.0  

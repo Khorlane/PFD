@@ -1,4 +1,3 @@
-# \<business name>
 # Quality, Food Safety, and Recall Domain Specification
 
 **Version:** 1.0  

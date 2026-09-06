@@ -1,4 +1,3 @@
-# \<business name>
 # Warehouse Operations PostgreSQL Build Specification
 
 **Version:** 1.0  

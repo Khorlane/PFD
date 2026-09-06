@@ -1,9 +1,5 @@
-# \<business name>
+# Business Model and Operating Policies
 
-## Business Model and Operating Policies
-
-**Company abbreviation:** \<company abbr>
-**Business address:** \<business address>  
 **Document date:** September 4, 2026  
 **Document purpose:** Authoritative definition of how the business operates and what information technology must support at a high level.
 

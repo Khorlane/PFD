@@ -1,4 +1,3 @@
-# \<business name>
 # Inventory Domain Specification
 
 **Version:** 1.0  

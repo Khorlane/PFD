@@ -1,4 +1,3 @@
-# \<business name>
 # Management Reporting and Audit Domain Specification
 
 **Version:** 1.0  

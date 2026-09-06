@@ -1,4 +1,3 @@
-# \<business name>
 # Supplier and Purchasing PostgreSQL Build Specification
 
 **Version:** 1.0  

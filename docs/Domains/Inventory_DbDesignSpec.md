@@ -1,4 +1,3 @@
-# \<business name>
 # Inventory PostgreSQL Build Specification
 
 **Version:** 1.0  

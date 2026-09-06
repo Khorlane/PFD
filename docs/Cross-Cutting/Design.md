@@ -1,4 +1,4 @@
-# \<business name> Simulation --- Design
+Simulation --- Design
 
 ## 1. Purpose
 

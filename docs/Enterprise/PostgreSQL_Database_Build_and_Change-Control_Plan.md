@@ -1,9 +1,5 @@
-# \<business name>
+# PostgreSQL Database Build and Change-Control Plan
 
-## PostgreSQL Database Build and Change-Control Plan
-
-**Company abbreviation:** \<company abbr>
-**Database platform:** PostgreSQL  
 **Document date:** September 4, 2026  
 **Document status:** Authoritative database implementation plan  
 

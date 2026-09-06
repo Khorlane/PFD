@@ -1,4 +1,3 @@
-# \<business name>
 # Workforce and Payroll Domain Specification
 
 **Version:** 1.0  

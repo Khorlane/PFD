@@ -1,4 +1,3 @@
-# \<business name>
 # Sales and Order Management Domain Specification
 
 **Version:** 1.0  

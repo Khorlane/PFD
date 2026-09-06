@@ -1,9 +1,5 @@
-# \<business name>
+# Business Process and Transaction Lifecycle Specification
 
-## Business Process and Transaction Lifecycle Specification
-
-**Company abbreviation:** \<company abbr>  
-**Business address:** \<business address>  
 **Document date:** September 4, 2026  
 **Document status:** Authoritative process and transaction-lifecycle specification  
 **Governing documents:**

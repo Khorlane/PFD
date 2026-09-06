@@ -1,4 +1,3 @@
-# \<business name>
 # Product PostgreSQL Build Specification
 
 **Version:** 1.0  

@@ -1,8 +1,5 @@
-# \<business name>
+# Relational Schema and Table Definition Specification
 
-## Relational Schema and Table Definition Specification
-
-**Database platform:** PostgreSQL  
 **Document date:** September 4, 2026  
 **Document status:** Authoritative logical-to-physical relational schema specification  
 **Governing documents:**

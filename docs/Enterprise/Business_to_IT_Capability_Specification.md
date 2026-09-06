@@ -1,9 +1,5 @@
-# \<business name>
+# Business-to-IT Capability Specification
 
-## Business-to-IT Capability Specification
-
-**Company abbreviation:** \<company abbr>
-**Business address:** \<business address>  
 **Document date:** September 4, 2026  
 **Document status:** Authoritative business-capability specification  
 **Governing business document:** `Business_Model_and_Operating_Policies.md`

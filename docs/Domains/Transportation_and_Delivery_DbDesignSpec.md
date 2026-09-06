@@ -1,4 +1,3 @@
-# \<business name>
 # Transportation and Delivery PostgreSQL Build Specification
 
 **Version:** 1.0  

@@ -1,4 +1,3 @@
-# \<business name>
 # Workforce and Payroll PostgreSQL Build Specification
 
 **Version:** 1.0  

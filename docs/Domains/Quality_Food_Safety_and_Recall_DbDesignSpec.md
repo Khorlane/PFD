@@ -1,4 +1,3 @@
-# \<business name>
 # Quality, Food Safety, and Recall PostgreSQL Build Specification
 
 **Version:** 1.0  

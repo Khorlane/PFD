@@ -1,4 +1,3 @@
-# \<business name>
 # Management Reporting and Audit PostgreSQL Build Specification
 
 **Version:** 1.0  

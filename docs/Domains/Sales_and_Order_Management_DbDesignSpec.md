@@ -1,4 +1,3 @@
-# \<business name>
 # Sales and Order Management PostgreSQL Build Specification
 
 **Version:** 1.0  

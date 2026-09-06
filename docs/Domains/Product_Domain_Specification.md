@@ -1,4 +1,3 @@
-# \<business name>
 # Product Domain Specification
 
 **Version:** 1.0  

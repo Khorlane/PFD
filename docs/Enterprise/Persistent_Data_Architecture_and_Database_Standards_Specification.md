@@ -1,9 +1,5 @@
-# \<business name>
+# Persistent Data Architecture and Database Standards Specification
 
-## Persistent Data Architecture and Database Standards Specification
-
-**Company abbreviation:** \<company abbr>  
-**Database platform:** PostgreSQL  
 **Document date:** September 4, 2026  
 **Document status:** Authoritative persistence architecture and database-standards specification  
 **Governing documents:**

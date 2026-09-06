@@ -1,4 +1,3 @@
-# \<business name>
 # Supplier and Purchasing Domain Specification
 
 **Version:** 1.0  

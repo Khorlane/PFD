@@ -1,4 +1,3 @@
-# \<business name>
 # Transportation and Delivery Domain Specification
 
 **Version:** 1.0  

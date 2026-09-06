@@ -1,9 +1,5 @@
-# \<business name>
+# Information Model and Record Ownership Specification
 
-## Information Model and Record Ownership Specification
-
-**Company abbreviation:** \<company abbr>
-**Business address:** \<business address>  
 **Document date:** September 4, 2026  
 **Document status:** Authoritative logical-information specification  
 **Governing documents:**

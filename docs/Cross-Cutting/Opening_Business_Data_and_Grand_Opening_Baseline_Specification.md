@@ -1,4 +1,3 @@
-# \<business name>
 # Opening Business Data and Grand-Opening Baseline Specification
 
 **Version:** 1.0  

@@ -1,6 +1,5 @@
 # Integrated Design Validation and Implementation Readiness Specification
 
-**Organization:** \<business name> (\<company abbr>)  
 **Version:** 1.0  
 **Date:** September 5, 2026  
 **Status:** Final integrated design validation and implementation-readiness specification  

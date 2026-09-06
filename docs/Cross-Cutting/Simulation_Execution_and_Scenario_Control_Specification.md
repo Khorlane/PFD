@@ -1,4 +1,3 @@
-# \<business name>
 # Simulation Execution and Scenario-Control Specification
 
 **Version:** 1.0  
