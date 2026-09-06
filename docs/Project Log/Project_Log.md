@@ -103,8 +103,8 @@ Expected result: only the standard `public` schema and a user-table count of zer
 
 - `SESSION.md`, section 22, “Local PostgreSQL development bootstrap.”
 - `database/README.md`.
-- `docs/enterprise/Database_Repository_and_Core_Build_Specification.md`.
-- `docs/enterprise/PostgreSQL_Database_Build_and_Change-Control_Plan.md`.
+- `docs/Enterprise/Database_Repository_and_Core_Build_Specification.md`.
+- `docs/Enterprise/PostgreSQL_Database_Build_and_Change-Control_Plan.md`.
 
 ### Deferred
 
@@ -259,3 +259,13 @@ No SQL was executed against `pfd_dev` as part of the formatting retrofit. No sch
 - Confirmed the naming boundary: `PFD` may identify simulator software and technical infrastructure, while the simulated business model remains company-neutral and configuration-driven.
 - Recorded that boundary in `SESSION.md`, section 25.
 - This was a design-document terminology change only. No SQL was changed or executed, and no database objects were created or modified.
+
+## 2026-09-06 14:57:50 -04:00 — Aligned the documentation folder structure with the solution
+
+- Reorganized `docs` into four top-level folders: `Cross-Cutting`, `Domains`, `Enterprise`, and `Project Log`.
+- Flattened the former domain-specific subfolders into `docs/Domains` while retaining the existing document filenames.
+- Consolidated the former decisions, implementation, opening-baseline, simulation, and source-material documents into `docs/Cross-Cutting`.
+- Removed the empty legacy documentation directories, including the unused `docs/operations` directory.
+- Updated `Pfd.slnx`, `SESSION.md`, and project-log cross-references to use the new paths.
+- Confirmed that all 36 Markdown files under `docs` are represented in `Pfd.slnx`, with no missing or stale entries.
+- No application source code, SQL, database objects, or build behavior changed.

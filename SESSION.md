@@ -439,7 +439,7 @@ The existing Python database-build runner may remain for schema builds, validati
 - The active owner roster contains one or more Owners, and effective Ownership Interests total exactly 100 percent.
 - Schema changes create `core.company` but do not supply a named Company row; the selected opening dataset supplies business identity.
 - Credentials, generated reports, exports, logs, backups, and database dumps containing private data remain outside the public repository.
-- The approved decision record is `docs/decisions/Public_Sample_and_Private_Configuration_Decision.md`.
+- The approved decision record is `docs/Cross-Cutting/Public_Sample_and_Private_Configuration_Decision.md`.
 - This was a design-only correction. Executable SQL, CSV, manifests, Python tools, Git configuration, and C++ artifacts were not aligned or created as part of this correction and remain future implementation work.
 
 ## 22. Local PostgreSQL development bootstrap
