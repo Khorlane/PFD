@@ -251,3 +251,11 @@ Results:
 ### Database effect
 
 No SQL was executed against `pfd_dev` as part of the formatting retrofit. No schemas or tables were created or changed.
+
+## 2026-09-06 12:52:50 -04:00 — Neutralized the inventory ownership code
+
+- Replaced the planned inventory ownership value `PFD_OWNED` with `COMPANY_OWNED` in the Inventory Domain Specification and Inventory PostgreSQL Build Specification.
+- The value identifies inventory owned by the configured simulated company, as distinct from future consigned or customer-owned inventory.
+- Confirmed the naming boundary: `PFD` may identify simulator software and technical infrastructure, while the simulated business model remains company-neutral and configuration-driven.
+- Recorded that boundary in `SESSION.md`, section 25.
+- This was a design-document terminology change only. No SQL was changed or executed, and no database objects were created or modified.

@@ -56,7 +56,7 @@ Allocation uses the Core number service; numbers are permanent and never reused.
 | Reference | Opening codes |
 |---|---|
 | Stock status | `RECEIVING`, `AVAILABLE`, `QUARANTINED`, `QUALITY_HOLD`, `RECALL_HOLD`, `DAMAGED`, `EXPIRED`, `RETURN_PENDING`, `DISPOSITION_PENDING`, `DISPOSED` |
-| Ownership | `PFD_OWNED` |
+| Ownership | `COMPANY_OWNED` |
 | Inventory transaction type | `RECEIPT_ACCEPT`, `RECEIPT_REJECT`, `PUTAWAY`, `REPLENISH_PICK_SLOT`, `TRANSFER`, `STATUS_CHANGE`, `ALLOCATE`, `DEALLOCATE`, `PICK`, `PICK_REVERSE`, `SHIP`, `SHIP_REVERSE`, `CUSTOMER_RETURN`, `SUPPLIER_RETURN`, `COUNT_ADJUST`, `DISPOSITION`, `HOLD`, `HOLD_RELEASE` |
 | Lot date type | `MANUFACTURE_DATE`, `PACK_DATE`, `BEST_BY_DATE`, `USE_BY_DATE`, `EXPIRATION_DATE` |
 | Hold type | `QUALITY`, `RECALL`, `DAMAGE`, `EXPIRATION_REVIEW`, `ADMINISTRATIVE` |

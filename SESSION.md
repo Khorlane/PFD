@@ -471,3 +471,11 @@ The existing Python database-build runner may remain for schema builds, validati
 - `.editorconfig` defines the repository-wide whitespace defaults.
 - `.clang-format` defines C++ formatting with 2-space indentation and no tabs.
 - Third-party files under `external` remain vendor-controlled and are exempt from formatting rules.
+
+## 25. Simulator and simulated-business naming boundary
+
+- `PFD` identifies the simulator software and may remain in solution, project, C++ namespace, simulation-control, build, diagnostic, and technical database-role names.
+- The simulated business model is company-neutral and must not contain fixed PFD names or references.
+- Business entities, rules, controlled values, natural keys, opening data, reports, and transaction descriptions use neutral terminology or values supplied by the selected company configuration.
+- Do not use PFD-prefixed ownership, product, lot, customer, supplier, order, invoice, or other business identifiers.
+- The configured company abbreviation is data and must never be assumed to be `PFD`.

@@ -89,7 +89,7 @@ Allocated quantity remains physically `AVAILABLE` but is committed through an al
 
 ## 6. Ownership
 
-Opening ownership is `PFD_OWNED`. The model may later support approved consigned or customer-owned stock, but such ownership must remain separately identifiable and must not enter inventory value without Finance policy.
+Opening ownership is `COMPANY_OWNED`. The model may later support approved consigned or customer-owned stock, but such ownership must remain separately identifiable and must not enter inventory value without Finance policy.
 
 Ownership transfer occurs only through a defined business event, normally accepted receipt or shipment confirmation according to agreed terms.
 
